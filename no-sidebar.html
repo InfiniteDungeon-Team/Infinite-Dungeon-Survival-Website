@@ -1,113 +1,100 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>About & GDD — Infinite Dungeon Survival</title>
     <meta charset="utf-8" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Mechanics — Infinite Dungeon Survival</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/overrides.css" />
   </head>
   <body class="no-sidebar is-preload">
     <div id="page-wrapper">
 
-      <!-- Header -->
-      <section id="header" class="wrapper">
-        <div id="logo">
-          <h1><a href="index.html">Infinite Dungeon Survival</a></h1>
-          <p>About the Project & GDD</p>
-        </div>
+      <!-- Header + Nav -->
+      <div id="header">
+        <h1><a href="index.html"><span style="color:#f0c14b">IDS</span> Infinite
+            Dungeon Survival</a></h1>
         <nav id="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="left-sidebar.html">Gallery</a></li>
             <li><a href="right-sidebar.html">Videos</a></li>
-            <li class="current"><a href="no-sidebar.html">About & GDD</a></li>
+            <li class="current"><a href="no-sidebar.html">Mechanics</a></li>
+            <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank">GDD
+                PDF</a></li>
           </ul>
         </nav>
-      </section>
-
-      <!-- Main -->
-      <div id="main" class="wrapper style2">
-        <div class="title">Project Overview</div>
-        <div class="container">
-          <div id="content">
-            <article class="box post">
-              <header class="style1">
-                <h2>Abstract</h2>
-                <p>Infinite Dungeon Survival is a top-down twin-stick roguelike
-                  set in a dystopian arena called The Trials. Players survive
-                  timed waves, then enter a vendor phase to purchase damage,
-                  AoE, and health upgrades with credits earned from kills.</p>
-              </header>
-
-              <a class="image featured"><img src="images/ksu-ccse-hero.png"
-                  alt="Project banner" /></a>
-
-              <h3>Design Goals</h3>
-              <p>Deliver a responsive combat loop with readable feedback,
-                scalable difficulty, and meaningful run-to-run decisions via an
-                upgrade economy.</p>
-
-              <h3>Level & Hazards</h3>
-              <p>The game takes place in a single sealed arena with four entry
-                points. Laser traps and crowd pressure force spatial awareness
-                and movement planning.</p>
-
-              <h3>Team & Milestones</h3>
-              <ul>
-                <li>Elliotte Wideman — Project Lead, Programming,
-                  Documentation</li>
-                <li>Hunter Blake — Narrative Design, Writing</li>
-                <li>Chancelor Brown — Design Consultant, Mechanics Testing</li>
-              </ul>
-
-              <p><a class="button style2" href="Infinite_Dungeon_Survival.pdf"
-                  target="_blank" rel="noopener">Open Full GDD (PDF)</a></p>
-            </article>
-          </div>
-        </div>
       </div>
 
-      <!-- Footer -->
-      <section id="footer" class="wrapper">
-        <div class="title">Contact</div>
-        <div class="container">
-          <div class="row aln-center">
-            <div class="col-8">
-              <section>
-                <h3>Contact & Links</h3>
-                <p>
-                  Elliotte Wideman — <a
-                    href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a>
-                  ·
-                  <a href="https://www.linkedin.com/in/elliottewideman007/"
-                    target="_blank" rel="noopener">LinkedIn</a><br />
-                  Hunter Blake — <a
-                    href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a>
-                  ·
-                  <a href="https://www.linkedin.com/in/hblake3/" target="_blank"
-                    rel="noopener">LinkedIn</a><br />
-                  Chancelor Brown — <a
-                    href="mailto:cbrown581@students.kennesaw.edu">cbrown581@students.kennesaw.edu</a>
-                  ·
-                  <a
-                    href="https://www.linkedin.com/in/chancelor-brown-04a083241/"
-                    target="_blank" rel="noopener">LinkedIn</a>
-                </p>
-              </section>
-            </div>
-          </div>
-          <div id="copyright">
-            <ul>
-              <li>© IDS Team</li>
-              <li>Theme: <a href="https://html5up.net/escape-velocity"
-                  target="_blank" rel="noopener">Escape Velocity</a></li>
-            </ul>
-          </div>
+      <!-- HERO -->
+      <section id="hero" class="wrapper" style="padding:2.5em 0 0;">
+        <div class="container" style="text-align:center;">
+          <img src="images/ksu-ccse-hero.png"
+            alt="KSU CCSE — Software Engineering & Game Development"
+            style="max-width:980px;width:100%;height:auto;display:inline-block" />
         </div>
       </section>
 
+      <!-- Mechanics -->
+      <section class="wrapper style3">
+        <div class="title">Mechanics & Level Design</div>
+        <div class="container">
+          <h3>Core Loop</h3>
+          <ul>
+            <li>Survive wave → earn credits → vendor phase → upgrade → next
+              wave.</li>
+            <li>Twin-stick controls with responsive dodge & hit feedback.</li>
+            <li>Scaling enemy spawns and hazards increase difficulty.</li>
+          </ul>
+          <h3>Upgrades</h3>
+          <ul>
+            <li>Damage, Area-of-Effect, Health, and Utility (e.g., movement
+              speed).</li>
+          </ul>
+          <h3>Level</h3>
+          <p>Single sealed arena with four spawn gates and rotating hazards
+            (e.g., lasers). Score = waves cleared + time survived.</p>
+        </div>
+      </section>
+
+      <!-- Footer (shared) -->
+      <footer id="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <h4>Team</h4>
+              <ul class="footer-list">
+                <li><strong>Elliotte Wideman</strong> — <a
+                    href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
+                <li><strong>Hunter Blake</strong> — <a
+                    href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a></li>
+                <li><strong>Chancelor Brown</strong> — <a
+                    href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Links</h4>
+              <ul class="footer-list">
+                <li><a
+                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website"
+                    target="_blank">GitHub Repo</a></li>
+                <li><a href="left-sidebar.html">Gallery</a> · <a
+                    href="right-sidebar.html">Videos</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>About</h4>
+              <p style="margin:0">Graduate project built in Unity for KSU
+                C-Day.</p>
+            </div>
+          </div>
+          <div class="small">© Team Infinite Dungeon Survival · Updated
+            2025-11-07</div>
+        </div>
+      </footer>
+
     </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
