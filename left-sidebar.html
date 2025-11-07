@@ -1,135 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Gallery — Infinite Dungeon Survival</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/overrides.css" />
-  </head>
-  <body class="left-sidebar is-preload">
-    <div id="page-wrapper">
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Gallery — IDS</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/overrides.css" />
+</head>
+<body class="left-sidebar is-preload">
+  <div id="page-wrapper">
 
-      <!-- Header + Nav -->
-      <div id="header">
-        <h1><a href="index.html"><span style="color:#f0c14b">IDS</span> Infinite
-            Dungeon Survival</a></h1>
-        <nav id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="left-sidebar.html">Gallery</a></li>
-            <li><a href="right-sidebar.html">Videos</a></li>
-            <li><a href="no-sidebar.html">Mechanics</a></li>
-            <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank">GDD
-                PDF</a></li>
-          </ul>
-        </nav>
+    <div id="header"><!-- existing header/nav --></div>
+
+    <section class="hero hero--gallery">
+      <div class="wrap">
+        <h1>SCREENSHOTS</h1>
+        <p>Game Arena &amp; UI</p>
       </div>
+    </section>
+    <div class="section-tag">Screenshots</div>
 
-      <!-- HERO -->
-      <section id="hero" class="wrapper" style="padding:2.5em 0 0;">
-        <div class="container" style="text-align:center;">
-          <img src="images/ksu-ccse-hero.png"
-            alt="KSU CCSE — Software Engineering & Game Development"
-            style="max-width:980px;width:100%;height:auto;display:inline-block" />
+    <section class="section-paper">
+      <div class="container">
+        <!-- keep your existing gallery grid/images here -->
+      </div>
+    </section>
+
+    <!-- unified footer -->
+    <footer id="footer"> <!-- same footer block as index.html --> 
+      <div class="container">
+        <div class="row">
+          <section class="col-4 col-12-medium">
+            <h3>Team</h3>
+            <ul class="footer-list">
+              <li><strong>Elliotte Wideman</strong> — <a href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
+              <li><strong>Hunter Blake</strong> — <a href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a></li>
+              <li><strong>Chancelor Brown</strong> — <a href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
+            </ul>
+          </section>
+          <section class="col-4 col-12-medium">
+            <h3>Links</h3>
+            <ul class="footer-list">
+              <li><a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub Repo</a></li>
+              <li><a href="docs/InfiniteDungeon_GDD.pdf">Game Design Document (PDF)</a></li>
+              <li><a href="right-sidebar.html">Videos</a> · <a href="no-sidebar.html">Mechanics</a></li>
+            </ul>
+          </section>
+          <section class="col-4 col-12-medium">
+            <h3>About</h3>
+            <p>Graduate project built in Unity for KSU C-Day. Theme/layout adapted for accessibility and speed.</p>
+          </section>
         </div>
-      </section>
+        <div class="row"><div class="col-12">
+          <ul class="copyright">
+            <li>© Team Infinite Dungeon Survival</li>
+            <li>Updated <span id="build-date">2025-11-07</span></li>
+          </ul>
+        </div></div>
+      </div>
+    </footer>
 
-      <!-- Content -->
-      <section class="wrapper style3">
-        <div class="title">Screenshots</div>
-        <div class="container" id="screens">
-          <div class="row gtr-150">
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arenaId.jpg"
-                  alt="Arena screenshot" />
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arena2.jpg"
-                  alt="Gameplay screenshot 2"
-                  onerror="this.style.opacity=.25; this.alt='Add images/arena2.jpg';" />
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arena3.jpg"
-                  alt="Gameplay screenshot 3"
-                  onerror="this.style.opacity=.25; this.alt='Add images/arena3.jpg';" />
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arena4.jpg"
-                  alt="Gameplay screenshot 4"
-                  onerror="this.style.opacity=.25; this.alt='Add images/arena4.jpg';" />
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arena5.jpg"
-                  alt="Gameplay screenshot 5"
-                  onerror="this.style.opacity=.25; this.alt='Add images/arena5.jpg';" />
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="box">
-                <img class="image featured" src="images/arena6.jpg"
-                  alt="Gameplay screenshot 6"
-                  onerror="this.style.opacity=.25; this.alt='Add images/arena6.jpg';" />
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer (shared) -->
-      <footer id="footer">
-        <div class="container">
-          <div class="footer-grid">
-            <div class="footer-col">
-              <h4>Team</h4>
-              <ul class="footer-list">
-                <li><strong>Elliotte Wideman</strong> — <a
-                    href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
-                <li><strong>Hunter Blake</strong> — <a
-                    href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a></li>
-                <li><strong>Chancelor Brown</strong> — <a
-                    href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Links</h4>
-              <ul class="footer-list">
-                <li><a
-                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website"
-                    target="_blank">GitHub Repo</a></li>
-                <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank">Game
-                    Design Document (PDF)</a></li>
-                <li><a href="right-sidebar.html">Videos</a> · <a
-                    href="no-sidebar.html">Mechanics</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>About</h4>
-              <p style="margin:0">Graduate project built in Unity for KSU
-                C-Day.</p>
-            </div>
-          </div>
-          <div class="small">© Team Infinite Dungeon Survival · Updated
-            2025-11-07</div>
-        </div>
-      </footer>
-
-    </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,75 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Videos — Infinite Dungeon Survival</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Videos — IDS</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/overrides.css" />
   </head>
   <body class="right-sidebar is-preload">
     <div id="page-wrapper">
 
-      <!-- Header + Nav -->
-      <div id="header">
-        <h1><a href="index.html"><span style="color:#f0c14b">IDS</span> Infinite
-            Dungeon Survival</a></h1>
-        <nav id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="left-sidebar.html">Gallery</a></li>
-            <li class="current"><a href="right-sidebar.html">Videos</a></li>
-            <li><a href="no-sidebar.html">Mechanics</a></li>
-            <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank">GDD
-                PDF</a></li>
-          </ul>
-        </nav>
-      </div>
+      <div id="header"><!-- existing header/nav --></div>
 
-      <!-- HERO -->
-      <section id="hero" class="wrapper" style="padding:2.5em 0 0;">
-        <div class="container" style="text-align:center;">
-          <img src="images/ksu-ccse-hero.png"
-            alt="KSU CCSE — Software Engineering & Game Development"
-            style="max-width:980px;width:100%;height:auto;display:inline-block" />
+      <section class="hero hero--videos">
+        <div class="wrap">
+          <h1>GAMEPLAY &amp; TRAILER</h1>
+          <p>Wave Loop · Vendor · Hazards</p>
         </div>
       </section>
+      <div class="section-tag">Gameplay &amp; Trailer</div>
 
-      <!-- Videos -->
-      <section class="wrapper style3">
-        <div class="title">Videos</div>
-        <div class="container" id="vids">
-          <div class="row gtr-150">
+      <section class="section-paper">
+        <div class="container">
+          <!-- your embed + notes/links; example layout -->
+          <div class="row">
             <div class="col-8 col-12-medium">
-              <section class="box">
-                <header><h3>Gameplay Demo</h3></header>
-                <video controls preload="metadata"
-                  style="width:100%;border-radius:8px"
-                  src="videos/GDDvideo.m4v"></video>
-                <p class="small" style="margin-top:.5em">If playback is slow on
-                  mobile, we’ll add an MP4 transcode.</p>
-              </section>
+              <!-- <iframe ...> or <video ...> goes here -->
             </div>
             <div class="col-4 col-12-medium">
-              <section class="box">
-                <header><h3>Downloads</h3></header>
-                <ul class="style2">
-                  <li><a href="Infinite_Dungeon_Survival.pdf"
-                      target="_blank">Game Design Document (PDF)</a></li>
-                </ul>
-                <p class="small">Supported formats: MP4/H.264, WebM, M4V.</p>
-              </section>
+              <h3>Notes</h3>
+              <p>For GitHub Pages, large videos may load slowly. Consider
+                YouTube hosting and linking here.</p>
+              <h3>Links</h3>
+              <ul>
+                <li><a href="docs/InfiniteDungeon_GDD.pdf">Open GDD PDF</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Footer (shared) -->
-      <footer id="footer">
+      <!-- unified footer (same as above) -->
+      <footer id="footer"> <!-- same footer block -->
         <div class="container">
-          <div class="footer-grid">
-            <div class="footer-col">
-              <h4>Team</h4>
+          <div class="row">
+            <section class="col-4 col-12-medium">
+              <h3>Team</h3>
               <ul class="footer-list">
                 <li><strong>Elliotte Wideman</strong> — <a
                     href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
@@ -78,35 +53,35 @@
                 <li><strong>Chancelor Brown</strong> — <a
                     href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
               </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Links</h4>
+            </section>
+            <section class="col-4 col-12-medium">
+              <h3>Links</h3>
               <ul class="footer-list">
                 <li><a
-                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website"
-                    target="_blank">GitHub Repo</a></li>
+                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
+                    Repo</a></li>
+                <li><a href="docs/InfiniteDungeon_GDD.pdf">Game Design Document
+                    (PDF)</a></li>
                 <li><a href="left-sidebar.html">Gallery</a> · <a
                     href="no-sidebar.html">Mechanics</a></li>
               </ul>
-            </div>
-            <div class="footer-col">
-              <h4>About</h4>
-              <p style="margin:0">Graduate project built in Unity for KSU
-                C-Day.</p>
-            </div>
+            </section>
+            <section class="col-4 col-12-medium">
+              <h3>About</h3>
+              <p>Graduate project built in Unity for KSU C-Day. Theme/layout
+                adapted for accessibility and speed.</p>
+            </section>
           </div>
-          <div class="small">© Team Infinite Dungeon Survival · Updated
-            2025-11-07</div>
+          <div class="row"><div class="col-12">
+              <ul class="copyright">
+                <li>© Team Infinite Dungeon Survival</li>
+                <li>Updated <span id="build-date">2025-11-07</span></li>
+              </ul>
+            </div></div>
         </div>
       </footer>
 
     </div>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
