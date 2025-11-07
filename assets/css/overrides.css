@@ -1,0 +1,97 @@
+/* === IDS overrides – keep vendor main.css pristine === */
+
+/* KSU black & gold palette */
+:root {
+  --ids-bg: #0b0e13;
+  --ids-panel: #0f141b;
+  --ids-ink: #e9eef5;
+  --ids-muted: #a6b1be;
+  --ids-gold: #f0c14b;
+}
+
+/* HERO (banner) – use KSU image */
+#header {
+  height: 30em;
+  background: #0b0e13 url("images/ksu-ccse-hero.png") center center/contain no-repeat !important;
+}
+.homepage #header {
+  height: 30em !important;
+}
+
+/* Wrapper color corrections */
+.wrapper.style1 {
+  background: var(--ids-gold) !important;
+  color: #111 !important;
+}
+.wrapper.style1 .title {
+  background: var(--ids-gold) !important;
+  color: #111 !important;
+}
+.wrapper.style3 {
+  background: var(--ids-panel) !important;
+  color: var(--ids-ink) !important;
+}
+.wrapper.style3 .title {
+  background: var(--ids-panel) !important;
+  color: var(--ids-ink) !important;
+}
+
+/* Typography & links */
+h1, h2, h3, h4, h5, h6 { color: var(--ids-ink) !important; }
+body, input, textarea, select { color: var(--ids-ink) !important; }
+a { color: var(--ids-gold); text-decoration: none; }
+a:hover { opacity: 0.85; }
+
+/* Buttons */
+.button.style1 {
+  background: var(--ids-gold) !important;
+  color: #111 !important;
+  border: none !important;
+}
+.button.style3 {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+/* Footer */
+#footer {
+  background: #0a0d12 !important;
+  color: rgba(233,238,245,.85) !important;
+  font-size: 13px;
+  text-align: center;
+  padding: 30px 0;
+}
+#footer a { color: var(--ids-gold) !important; font-weight: 600; }
+#footer a:hover { text-decoration: underline; }
+
+/* Footer grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  align-items: start;
+  margin-bottom: 24px;
+}
+.footer-col { max-width: 260px; }
+.footer-col h4 {
+  margin-bottom: 8px;
+  color: var(--ids-gold);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+
+/* Title card tweak */
+.wrapper .title {
+  top: -2.5em;
+  height: 3em;
+  line-height: 3em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 980px) {
+  .wrapper { padding-top: 5em; }
+  .wrapper .title { top: -2em; height: 2.5em; line-height: 2.5em; }
+  .footer-grid { grid-template-columns: 1fr; gap: 12px; }
+}
