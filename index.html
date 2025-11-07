@@ -1,339 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+  Escape Velocity by HTML5 UP (structure kept intact)
+  Edited for Infinite Dungeon Survival (IDS)
+-->
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Infinite Dungeon Survival — Twin-Stick Roguelike | KSU C-Day Graduate
-      Game Project</title>
-    <meta name="description"
-      content="Infinite Dungeon Survival is a fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds. View the GDD, screenshots, video, and team links.">
-
-    <link rel="canonical" href="https://UPDATE_ME_BASE_URL/">
-    <link rel="alternate" hreflang="en" href="https://UPDATE_ME_BASE_URL/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title"
-      content="Infinite Dungeon Survival — Twin-Stick Roguelike">
-    <meta property="og:description"
-      content="Survive escalating waves, earn credits, and upgrade between rounds. Read the GDD and meet the team.">
-    <meta property="og:url" content="https://UPDATE_ME_BASE_URL/">
-    <meta property="og:image"
-      content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title"
-      content="Infinite Dungeon Survival — Twin-Stick Roguelike">
-    <meta name="twitter:description"
-      content="Unity-built graduate game project for KSU C-Day. Waves, upgrades, tight controls.">
-    <meta name="twitter:image"
-      content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
-
-    <meta name="theme-color" content="#0b0e13">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet">
-
-    <style>
-  :root { --bg:#0b0e13; --panel:#0f141b; --ink:#e9eef5; --muted:#a6b1be; --gold:#f0c14b; --line:#1c2631; --link:#f0c14b; }
-  *{box-sizing:border-box} html,body{margin:0;padding:0}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:16px}
-  a{color:var(--link);text-decoration:none}
-  a:focus-visible,.menu a:focus-visible{outline:2px dashed var(--gold);outline-offset:3px}
-
-  /* Header / nav */
-  .topbar{position:sticky;top:0;z-index:50;background:#000;border-bottom:3px solid var(--gold)}
-  .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;position:relative}
-  .logo{font-weight:800;letter-spacing:.02em;font-size:16px}
-  .logo span{color:var(--gold)}
-  .menu{display:flex;align-items:center;gap:12px}
-  .menu a{font-weight:600;font-size:14px;color:var(--ink);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .25s,border-bottom-color .25s}
-  .menu a:hover{color:var(--gold);border-bottom-color:var(--gold)}
-  .nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:var(--panel);cursor:pointer}
-  .nav-toggle span{display:block;width:20px;height:2px;background:var(--gold);margin:3px 0;transition:transform .25s ease,opacity .2s ease}
-
-  header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(240,193,75,.10),transparent 55%)}
-  .wrap{max-width:1100px;margin:0 auto;padding:16px}
-  .hero{display:grid;grid-template-columns:1fr;gap:12px;align-items:center;padding:12px 0;text-align:center}
-  .hero img{max-width:480px;width:100%}
-  h1{font-size:34px;margin:4px 0 0}
-  .tag{display:inline-block;background:var(--gold);color:#111;padding:4px 10px;border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.08em}
-
-  section{padding:22px 0} h2{font-size:22px;margin:0 0 8px}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
-  p{line-height:1.6;margin:8px 0}
-  .small{color:var(--muted);font-size:13px}
-  figure{margin:0} figcaption{color:var(--muted);font-size:12px;margin-top:6px}
-  img.thumb{width:100%;border-radius:10px;display:block}
-  video{width:100%;border-radius:12px;outline:none}
-
-  /* --- Professional compact footer --- */
-.site-footer { border-top:1px solid var(--line); background: #070a0e; }
-.footer-grid {
-  display:grid; grid-template-columns: 1.6fr 1fr 1.4fr; gap:18px; padding:22px 16px;
-}
-.footer-title { color:var(--ink); font-weight:800; font-size:14px; margin:0 0 8px; letter-spacing:.02em; }
-.footer-text { color:var(--muted); font-size:13px; line-height:1.55; margin:0 0 10px; }
-.footer-list { list-style:none; padding:0; margin:0; }
-.footer-list li { margin:8px 0; font-size:13px; color:var(--muted); }
-.footer-list.tight li { margin:6px 0; }
-.footer-list a { color:var(--link); }
-.footer-list a:hover { text-decoration:underline; }
-
-.footer-meta {
-  display:flex; align-items:center; gap:8px; color:var(--muted);
-  font-size:12px; padding:10px 16px 26px;
-  border-top:1px solid var(--line);
-}
-.footer-meta .spacer { flex:1; }
-.back-to-top { color:var(--ink); font-weight:600; font-size:12px; padding:4px 8px; border-radius:8px; border:1px solid var(--line); background:var(--panel); }
-.back-to-top:hover { border-color:var(--gold); color:var(--gold); }
-
-/* Mobile stack */
-@media (max-width: 900px){
-  .footer-grid { grid-template-columns:1fr; gap:12px; }
-  .footer-list li { margin:6px 0; }
-}
-
-</style>
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Infinite Dungeon Survival","url":"https://UPDATE_ME_BASE_URL/","potentialAction":{"@type":"SearchAction","target":"https://UPDATE_ME_BASE_URL/?q={search_term_string}","query-input":"required name=search_term_string"}}
-</script>
-    <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"Infinite Dungeon Survival","genre":["Action","Shooter","Roguelike"],"url":"https://UPDATE_ME_BASE_URL/","image":"https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png","author":{"@type":"CollegeOrUniversity","name":"Kennesaw State University"},"gamePlatform":["PC","Web"],"publisher":{"@type":"Organization","name":"Team Infinite Dungeon Survival"},"description":"A fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds.","creator":[{"@type":"Person","name":"Elliotte Wideman","sameAs":"https://www.linkedin.com/in/elliottewideman007/"},{"@type":"Person","name":"Hunter Blake","sameAs":"https://www.linkedin.com/in/hblake3/"},{"@type":"Person","name":"Chancelor Brown","sameAs":"https://www.linkedin.com/in/chancelor-brown-04a083241/"}]}
-</script>
+    <title>Infinite Dungeon Survival — KSU C-Day</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Infinite Dungeon Survival is a twin-stick roguelike built in Unity. Survive waves, earn credits, and upgrade between rounds. GDD, screenshots, and video." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="canonical" href="https://<your-pages-domain>/" />
+    <meta property="og:title" content="Infinite Dungeon Survival — KSU C-Day" />
+    <meta property="og:description" content="Twin-stick roguelike built in Unity. Waves, upgrades, tight controls." />
+    <meta property="og:image" content="images/ksu-ccse-hero.png" />
+    <meta property="og:type" content="website" />
   </head>
-  <body>
-    <!-- Header -->
-    <div class="topbar" role="navigation" aria-label="Primary">
-      <div class="nav">
-        <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-        <button class="nav-toggle" aria-controls="primary-menu"
-          aria-expanded="false"
-          aria-label="Toggle menu"><span></span><span></span><span></span></button>
-        <nav id="primary-menu" class="menu" aria-label="Section menu">
-          <a href="#abstract">Abstract</a>
-          <a href="#intro-design">Intro</a>
-          <a href="#mechanics-level">Mechanics</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#videos">Videos</a>
-          <a href="Infinite_Dungeon_Survival.pdf" target="_blank"
-            rel="noopener">GDD PDF</a>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+
+      <!-- Header -->
+      <section id="header" class="wrapper">
+        <!-- Logo -->
+        <div id="logo">
+          <h1><a href="index.html">Infinite Dungeon Survival</a></h1>
+          <p>Twin-stick roguelike • KSU CCSE C-Day</p>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="left-sidebar.html">Gallery</a></li>
+            <li><a href="right-sidebar.html">Videos</a></li>
+            <li><a href="no-sidebar.html">About & GDD</a></li>
+          </ul>
         </nav>
-      </div>
-    </div>
-
-    <header role="banner">
-      <div class="wrap hero">
-        <img src="images/ksu-ccse-hero.png"
-          alt="Kennesaw State University — CCSE Software Engineering & Game Development">
-        <div>
-          <span class="tag">Graduate Game Project</span>
-          <h1>Infinite Dungeon Survival</h1>
-          <p class="small">A twin-stick roguelike — site generated from the Game
-            Design Document.</p>
-        </div>
-      </div>
-    </header>
-
-    <main class="wrap" role="main">
-      <section id="abstract" class="card">
-        <h2>Abstract</h2>
-        <p>Infinite Dungeon Survival is a top-down twin-stick roguelike shooter
-          set in a dystopian arena called The Trials. Players survive escalating
-          waves, earn credits, and buy upgrades between rounds. Built in Unity
-          as a graduate project, the game explores scalable difficulty,
-          responsive controls, and user-centered feedback.</p>
       </section>
 
-      <section id="intro-design" aria-labelledby="intro">
-        <div class="grid2">
-          <div class="card">
-            <h2 id="intro">Introduction</h2>
-            <p>The project addresses the challenge of building a balanced,
-              replayable 2D combat loop that remains engaging over time.
-              Inspired by Enter the Gungeon and Smash TV, we designed a
-              fast-paced arcade experience that rewards mastery and
-              decision-making.</p>
-          </div>
-          <div class="card">
-            <h2>Design</h2>
-            <p>Core vision: a focused survival arena emphasizing crowd control
-              and spatial awareness. A readable pixel-art style, clear feedback,
-              and an upgrade economy let players shape runs between waves.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="mechanics-level" aria-labelledby="mechanics">
-        <div class="grid2">
-          <div class="card">
-            <h2 id="mechanics">Mechanics</h2>
-            <p>Twin-stick controls; wave scaling; credits on kills; a vendor for
-              weapon damage, AoE, and health upgrades. Sound/UI cues signal wave
-              starts, shop phases, hits, and death.</p>
-          </div>
-          <div class="card">
-            <h2>Level Design</h2>
-            <p>Single sealed arena with four entry points and hazards such as
-              laser traps. Success is measured by survival duration and waves
-              cleared.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" aria-labelledby="gallery-title">
-        <h2 id="gallery-title">Gallery</h2>
-        <div class="grid3">
-          <figure class="card">
-            <img class="thumb" src="images/arenaId.jpg"
-              alt="Gameplay arena view, wave in progress">
-            <figcaption>Arena screenshot</figcaption>
-          </figure>
-          <figure class="card">
-            <img class="thumb" src="images/arena2.jpg"
-              alt="Second gameplay screenshot"
-              onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena2.jpg';">
-            <figcaption>Placeholder</figcaption>
-          </figure>
-          <figure class="card">
-            <img class="thumb" src="images/arena3.jpg"
-              alt="Third gameplay screenshot"
-              onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena3.jpg';">
-            <figcaption>Placeholder</figcaption>
-          </figure>
-        </div>
-        <p class="small">Tip: drop more images into <code>/images</code> and
-          update filenames to show them here.</p>
-      </section>
-
-      <section id="videos" class="card" aria-labelledby="videos-title">
-        <h2 id="videos-title">Videos</h2>
-        <div class="grid2">
-          <!-- NOTE: GitHub Pages will NOT serve LFS .m4v. Prefer a regular MP4 under ~100MB or a YouTube embed. -->
-          <figure class="card">
-            <div class="small">Add a web mp4 (e.g.,
-              <code>videos/gameplay-demo.mp4</code>) or replace with a YouTube
-              embed.</div>
-            <figcaption>Gameplay Demo</figcaption>
-          </figure>
-          <figure class="card">
-            <div class="small">Optional short trailer slot.</div>
-            <figcaption>Short Trailer</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="links" class="card" aria-labelledby="team-links">
-        <h2 id="team-links">Team & Links</h2>
-        <p><strong>Repository:</strong> <a
-            href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival"
-            target="_blank"
-            rel="noopener">github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival</a></p>
-        <p><strong>GDD:</strong> <a href="Infinite_Dungeon_Survival.pdf"
-            target="_blank" rel="noopener">Open PDF</a></p>
-      </section>
-    </main>
-
-    <footer role="contentinfo" class="site-footer">
-      <div class="wrap footer-grid">
-        <section class="footer-col">
-          <h3 class="footer-title">Infinite Dungeon Survival</h3>
-          <p class="footer-text">
-            Twin-stick roguelike built in Unity for KSU CCSE C-Day. Survive
-            waves, earn credits, upgrade between rounds.
+      <!-- Intro -->
+      <section id="intro" class="wrapper style1">
+        <div class="title">The Introduction</div>
+        <div class="container">
+          <p class="style1">A fast, replayable survival arena built in Unity.</p>
+          <p class="style2">
+            Survive escalating waves, earn credits, and upgrade between rounds.
           </p>
-          <ul class="footer-list tight">
-            <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank"
-                rel="noopener">Game Design Document (PDF)</a></li>
-            <li><a
-                href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival"
-                target="_blank" rel="noopener">Source Repository</a></li>
+          <p class="style3">
+            Waves scale in difficulty, a vendor appears after each wave with damage/AoE/health upgrades, and hazards like laser traps keep movement tactical.
+          </p>
+          <ul class="actions">
+            <li><a href="no-sidebar.html" class="button style3 large">Read the Project</a></li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="footer-col">
-          <h3 class="footer-title">Quick Links</h3>
-          <ul class="footer-list">
-            <li><a href="#abstract">Abstract</a></li>
-            <li><a href="#intro-design">Introduction</a></li>
-            <li><a href="#mechanics-level">Mechanics</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#videos">Videos</a></li>
-          </ul>
-        </section>
+      <!-- Main -->
+      <section id="main" class="wrapper style2">
+        <div class="title">Highlights</div>
+        <div class="container">
 
-        <section class="footer-col">
-          <h3 class="footer-title">Contact</h3>
-          <ul class="footer-list">
-            <li>
-              <strong>Elliotte Wideman</strong><br>
-              <a
-                href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br>
-              <a href="https://www.linkedin.com/in/elliottewideman007/"
-                target="_blank" rel="noopener">LinkedIn</a>
-            </li>
-            <li>
-              <strong>Hunter Blake</strong><br>
-              <a
-                href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br>
-              <a href="https://www.linkedin.com/in/hblake3/" target="_blank"
-                rel="noopener">LinkedIn</a>
-            </li>
-            <li>
-              <strong>Chancelor Brown</strong><br>
-              <a
-                href="mailto:cbrown581@students.kennesaw.edu">cbrown581@students.kennesaw.edu</a><br>
-              <a href="https://www.linkedin.com/in/chancelor-brown-04a083241/"
-                target="_blank" rel="noopener">LinkedIn</a>
-            </li>
-          </ul>
-        </section>
-      </div>
+          <!-- Image -->
+          <a href="#" class="image featured">
+            <img src="images/ksu-ccse-hero.png" alt="KSU CCSE banner" />
+          </a>
 
-      <div class="wrap footer-meta">
-        <span>© Team Infinite Dungeon Survival</span>
-        <span>·</span>
-        <span>Updated 2025-11-07</span>
-        <span class="spacer"></span>
-        <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to
-          top</a>
-      </div>
-    </footer>
+          <!-- Features -->
+          <section id="features">
+            <header class="style1">
+              <h2>Core Features</h2>
+              <p>Designed for responsive controls, readable feedback, and a tight upgrade loop.</p>
+            </header>
+            <div class="feature-list">
+              <div class="row">
+                <div class="col-6 col-12-medium">
+                  <section>
+                    <h3 class="icon fa-bolt">Twin-Stick Combat</h3>
+                    <p>Controller/KBM friendly; fast movement and shooting with clear hit feedback.</p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-chart-line">Wave Scaling</h3>
+                    <p>Difficulty ramps each round; survive until the timer to reach the vendor phase.</p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-medium">
+                  <section>
+                    <h3 class="icon fa-coins">Credits & Vendor</h3>
+                    <p>Earn credits from kills; buy damage, AoE, or health upgrades between waves.</p>
+                  </section>
+                </div>
+                <div class="col-6 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-exclamation-triangle">Arena Hazards</h3>
+                    <p>Laser traps constrain space, rewarding smart positioning and crowd control.</p>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <ul class="actions special">
+              <li><a href="left-sidebar.html" class="button style1 large">See Screenshots</a></li>
+              <li><a href="right-sidebar.html" class="button style2 large">Watch Video</a></li>
+              <li><a href="no-sidebar.html" class="button style3 large">Open GDD</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
 
-    <!-- Mobile menu script -->
-    <script>
-(function () {
-  const topbar = document.querySelector('.topbar');
-  const btn = document.querySelector('.nav-toggle');
-  const menu = document.getElementById('primary-menu');
+      <!-- Footer -->
+      <section id="footer" class="wrapper">
+        <div class="title">Contact</div>
+        <div class="container">
+          <header class="style1">
+            <h2>Team Infinite Dungeon Survival</h2>
+            <p>Mentor: Prof. Brooke Zhao</p>
+          </header>
+          <div class="row aln-center">
+            <div class="col-4 col-12-medium">
+              <section class="feature-list small">
+                <div class="row">
+                  <div class="col-12">
+                    <section>
+                      <h3 class="icon solid fa-user">Elliotte Wideman</h3>
+                      <p><a href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br/>
+                      <a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank" rel="noopener">LinkedIn</a></p>
+                    </section>
+                  </div>
+                  <div class="col-12">
+                    <section>
+                      <h3 class="icon solid fa-user">Hunter Blake</h3>
+                      <p><a href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br/>
+                      <a href="https://www.linkedin.com/in/hblake3/" target="_blank" rel="noopener">LinkedIn</a></p>
+                    </section>
+                  </div>
+                  <div class="col-12">
+                    <section>
+                      <h3 class="icon solid fa-user">Chancelor Brown</h3>
+                      <p><a href="mailto:cbrown581@students.kennesaw.edu">cbrown581@students.kennesaw.edu</a><br/>
+                      <a href="https://www.linkedin.com/in/chancelor-brown-04a083241/" target="_blank" rel="noopener">LinkedIn</a></p>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="copyright">
+            <ul>
+              <li>© IDS Team</li>
+              <li>Theme: <a href="https://html5up.net/escape-velocity" target="_blank" rel="noopener">Escape Velocity</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  btn.addEventListener('click', () => {
-    const open = topbar.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!topbar.contains(e.target)) {
-      topbar.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      topbar.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
