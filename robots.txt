@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/sitemap.xml

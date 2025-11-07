@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infinite Dungeon Survival — GDD Website</title>
+<meta name="description" content="Website generated from the Infinite Dungeon Survival Game Design Document.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* === KSU Black & Gold Theme === */
+  :root {
+    --bg:#0b0e13;
+    --panel:#0f141b;
+    --ink:#e9eef5;
+    --muted:#a6b1be;
+    --gold:#f0c14b;
+    --line:#1c2631;
+    --link:#f0c14b;  /* make links gold by default */
+  }
+  * { box-sizing:border-box }
+  html,body { margin:0; padding:0; }
+  body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    font-size:16px;
+  }
+  a { color:var(--link); text-decoration:none }
+
+  /* Top nav */
+  .topbar {
+    position:sticky; top:0; z-index:50;
+    background:#000;                 /* solid black bar */
+    border-bottom:3px solid var(--gold);
+  }
+  .nav {
+    max-width:1100px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 16px;
+  }
+  .logo { font-weight:800; letter-spacing:.02em; font-size:16px; }
+  .logo span { color:var(--gold); }
+  .menu a {
+    margin-left:14px; font-weight:600; font-size:14px; color:var(--ink);
+    padding-bottom:2px; border-bottom:2px solid transparent; transition:color .25s, border-bottom-color .25s;
+  }
+  .menu a:hover { color:var(--gold); border-bottom-color:var(--gold); }
+
+  header {
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(240,193,75,.10), transparent 55%);
+  }
+  .wrap { max-width:1100px; margin:0 auto; padding:16px }
+  .hero {
+    display:grid; grid-template-columns: 1fr; gap:12px;
+    align-items:center; padding:12px 0; text-align:center
+  }
+  .hero img { max-width:480px; width:100%; }
+  h1 { font-size:34px; margin:4px 0 0 }
+  .tag {
+    display:inline-block; background:var(--gold); color:#111;
+    padding:4px 10px; border-radius:999px; font-weight:800; font-size:11px; letter-spacing:.08em
+  }
+
+  section { padding:22px 0 }
+  h2 { font-size:22px; margin:0 0 8px }
+  .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:14px }
+  .grid3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:14px }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px }
+  p { line-height:1.6; margin:8px 0 }
+  .small { color:var(--muted); font-size:13px }
+  figure { margin:0 }
+  figcaption { color:var(--muted); font-size:12px; margin-top:6px }
+  img.thumb { width:100%; border-radius:10px; display:block }
+  video { width:100%; border-radius:12px; outline:none }
+  footer { border-top:1px solid var(--line); color:var(--muted); padding:18px 0 40px; font-size:13px }
+
+  @media (max-width: 900px) {
+    .grid2 { grid-template-columns:1fr }
+    .grid3 { grid-template-columns:1fr }
+    .menu { display:none }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="nav">
+    <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
+    <nav class="menu">
+      <a href="#abstract">Abstract</a>
+      <a href="#intro-design">Intro</a>
+      <a href="#mechanics-level">Mechanics</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
+      <a href="Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">GDD PDF</a>
+    </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hero">
+    <img src="images/ksu-ccse-hero.png" alt="Kennesaw State University CCSE — Software Engineering and Game Development">
+    <div>
+      <span class="tag">Graduate Game Project</span>
+      <h1>Infinite Dungeon Survival</h1>
+      <p class="small">A twin-stick roguelike — site from the Game Design Document.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="abstract" class="card">
+    <h2>Abstract</h2>
+    <p>Infinite Dungeon Survival is a top-down twin-stick roguelike shooter set in a dystopian arena called The Trials. Players survive escalating waves, earn credits, and buy upgrades between rounds. Built in Unity as a graduate project, the game explores scalable difficulty, responsive controls, and user-centered feedback.</p>
+  </section>
+
+  <section id="intro-design">
+    <div class="grid2">
+      <div class="card">
+        <h2>Introduction</h2>
+        <p>The project addresses the challenge of building a balanced, replayable 2D combat loop that remains engaging over time. Inspired by Enter the Gungeon and Smash TV, we designed a fast-paced arcade experience that rewards mastery and decision-making.</p>
+      </div>
+      <div class="card">
+        <h2>Design</h2>
+        <p>Core vision: a focused survival arena emphasizing crowd control and spatial awareness. A readable pixel-art style, clear feedback, and an upgrade economy let players shape runs between waves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mechanics-level">
+    <div class="grid2">
+      <div class="card">
+        <h2>Mechanics</h2>
+        <p>Twin-stick controls; wave scaling; credits on kills; a vendor for weapon damage, AoE, and health upgrades. Sound/UI cues signal wave starts, shop phases, hits, and death.</p>
+      </div>
+      <div class="card">
+        <h2>Level Design</h2>
+        <p>Single sealed arena with four entry points and hazards such as laser traps. Success is measured by survival duration and waves cleared.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="grid3">
+      <!-- Replace these placeholders by dropping files into /images with the same names -->
+      <figure class="card"><img class="thumb" src="images/arena1.jpg" alt="Arena shot 1"><figcaption>Arena screenshot</figcaption></figure>
+      <figure class="card"><img class="thumb" src="images/arena2.jpg" alt="Arena shot 2" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena2.jpg';"><figcaption>Placeholder</figcaption></figure>
+      <figure class="card"><img class="thumb" src="images/arena3.jpg" alt="Arena shot 3" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena3.jpg';"><figcaption>Placeholder</figcaption></figure>
+      <figure class="card"><img class="thumb" src="images/arena4.jpg" alt="Arena shot 4" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena4.jpg';"><figcaption>Placeholder</figcaption></figure>
+      <figure class="card"><img class="thumb" src="images/arena5.jpg" alt="Arena shot 5" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena5.jpg';"><figcaption>Placeholder</figcaption></figure>
+      <figure class="card"><img class="thumb" src="images/arena6.jpg" alt="Arena shot 6" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena6.jpg';"><figcaption>Placeholder</figcaption></figure>
+    </div>
+    <p class="small">Tip: just drop more images into <code>/images</code> and reference them here, or replace the filenames above.</p>
+  </section>
+
+  <section id="videos">
+    <h2>Videos</h2>
+    <div class="grid2">
+      <!-- Drop your videos into /videos and point the src to them -->
+      <figure class="card">
+        <video controls preload="metadata" src="videos/ids-gameplay.m4v"></video>
+        <figcaption>Gameplay Demo</figcaption>
+      </figure>
+      <figure class="card">
+        <video controls preload="metadata" src="videos/trailer.mp4" onerror="this.outerHTML='<div class=small>Drop /videos/trailer.mp4 to enable this slot.</div>'"></video>
+        <figcaption>Short Trailer</figcaption>
+      </figure>
+    </div>
+    <p class="small">Supported formats: MP4/H.264, WebM, M4V. Keep files under ~200 MB for quick loading on GitHub Pages.</p>
+  </section>
+
+  <section id="links" class="card">
+    <h2>Team & Links</h2>
+    <p><strong>Team:</strong></p>
+    <ul style="list-style:none; padding-left:0; line-height:1.8;">
+      <li><a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank" style="color:var(--gold); font-weight:600;">Elliotte Wideman</a></li>
+      <li><a href="https://www.linkedin.com/in/hblake3/" target="_blank" style="color:var(--gold); font-weight:600;">Hunter Blake</a></li>
+      <li><a href="https://www.linkedin.com/in/chancelor-brown-04a083241/" target="_blank" style="color:var(--gold); font-weight:600;">Chancelor Brown</a></li>
+    </ul>
+    <p><strong>Repository:</strong> <a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival" target="_blank">github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival</a></p>
+    <p><strong>GDD:</strong> <a href="Infinite_Dungeon_Survival.pdf" target="_blank">Open PDF</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© Team Infinite Dungeon Survival · Updated 2025-11-07. Built for KSU C-Day.</p>
+  </div>
+</footer>
+</body>
+</html>
