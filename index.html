@@ -3,13 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Infinite Dungeon Survival — GDD Website</title>
-<meta name="description" content="Website generated from the Infinite Dungeon Survival Game Design Document.">
+
+<title>Infinite Dungeon Survival — Twin-Stick Roguelike | KSU C-Day Graduate Game Project</title>
+<meta name="description" content="Infinite Dungeon Survival is a fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds. View the GDD, screenshots, video, and team links.">
+
+<!-- Canonical + hreflang (UPDATE AFTER PUBLISH) -->
+<link rel="canonical" href="https://UPDATE_ME_BASE_URL/">
+<link rel="alternate" hreflang="en" href="https://UPDATE_ME_BASE_URL/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Infinite Dungeon Survival — Twin-Stick Roguelike">
+<meta property="og:description" content="Survive escalating waves, earn credits, and upgrade between rounds. Read the GDD and meet the team.">
+<meta property="og:url" content="https://UPDATE_ME_BASE_URL/">
+<meta property="og:image" content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Infinite Dungeon Survival — Twin-Stick Roguelike">
+<meta name="twitter:description" content="Unity-built graduate game project for KSU C-Day. Waves, upgrades, tight controls.">
+<meta name="twitter:image" content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
+
+<!-- Theme color -->
+<meta name="theme-color" content="#0b0e13">
+
+<!-- Performance hints -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-  /* === KSU Black & Gold Theme === */
+  /* === KSU Black & Gold Theme + Accessible Contrast === */
   :root {
     --bg:#0b0e13;
     --panel:#0f141b;
@@ -17,29 +41,20 @@
     --muted:#a6b1be;
     --gold:#f0c14b;
     --line:#1c2631;
-    --link:#f0c14b;  /* make links gold by default */
+    --link:#f0c14b;
   }
   * { box-sizing:border-box }
   html,body { margin:0; padding:0; }
   body {
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    font-size:16px;
+    background:var(--bg); color:var(--ink); font-size:16px;
   }
   a { color:var(--link); text-decoration:none }
+  a:focus-visible, .menu a:focus-visible { outline:2px dashed var(--gold); outline-offset:3px; }
 
   /* Top nav */
-  .topbar {
-    position:sticky; top:0; z-index:50;
-    background:#000;                 /* solid black bar */
-    border-bottom:3px solid var(--gold);
-  }
-  .nav {
-    max-width:1100px; margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:10px 16px;
-  }
+  .topbar { position:sticky; top:0; z-index:50; background:#000; border-bottom:3px solid var(--gold); }
+  .nav { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px; }
   .logo { font-weight:800; letter-spacing:.02em; font-size:16px; }
   .logo span { color:var(--gold); }
   .menu a {
@@ -48,26 +63,17 @@
   }
   .menu a:hover { color:var(--gold); border-bottom-color:var(--gold); }
 
-  header {
-    border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg, rgba(240,193,75,.10), transparent 55%);
-  }
+  header { border-bottom:1px solid var(--line); background:linear-gradient(180deg, rgba(240,193,75,.10), transparent 55%); }
   .wrap { max-width:1100px; margin:0 auto; padding:16px }
-  .hero {
-    display:grid; grid-template-columns: 1fr; gap:12px;
-    align-items:center; padding:12px 0; text-align:center
-  }
+  .hero { display:grid; grid-template-columns:1fr; gap:12px; align-items:center; padding:12px 0; text-align:center }
   .hero img { max-width:480px; width:100%; }
   h1 { font-size:34px; margin:4px 0 0 }
-  .tag {
-    display:inline-block; background:var(--gold); color:#111;
-    padding:4px 10px; border-radius:999px; font-weight:800; font-size:11px; letter-spacing:.08em
-  }
+  .tag { display:inline-block; background:var(--gold); color:#111; padding:4px 10px; border-radius:999px; font-weight:800; font-size:11px; letter-spacing:.08em }
 
   section { padding:22px 0 }
   h2 { font-size:22px; margin:0 0 8px }
-  .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:14px }
-  .grid3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:14px }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px }
   .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px }
   p { line-height:1.6; margin:8px 0 }
   .small { color:var(--muted); font-size:13px }
@@ -77,18 +83,52 @@
   video { width:100%; border-radius:12px; outline:none }
   footer { border-top:1px solid var(--line); color:var(--muted); padding:18px 0 40px; font-size:13px }
 
-  @media (max-width: 900px) {
+  @media (max-width:900px){
     .grid2 { grid-template-columns:1fr }
     .grid3 { grid-template-columns:1fr }
     .menu { display:none }
   }
 </style>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Infinite Dungeon Survival",
+  "url":"https://UPDATE_ME_BASE_URL/",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://UPDATE_ME_BASE_URL/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoGame",
+  "name":"Infinite Dungeon Survival",
+  "genre":["Action","Shooter","Roguelike"],
+  "url":"https://UPDATE_ME_BASE_URL/",
+  "image":"https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png",
+  "author":{"@type":"CollegeOrUniversity","name":"Kennesaw State University"},
+  "gamePlatform":["PC","Web"],
+  "publisher":{"@type":"Organization","name":"Team Infinite Dungeon Survival"},
+  "description":"A fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds.",
+  "creator":[
+    {"@type":"Person","name":"Elliotte Wideman","sameAs":"https://www.linkedin.com/in/elliottewideman007/"},
+    {"@type":"Person","name":"Hunter Blake","sameAs":"https://www.linkedin.com/in/hblake3/"},
+    {"@type":"Person","name":"Chancelor Brown","sameAs":"https://www.linkedin.com/in/chancelor-brown-04a083241/"}
+  ]
+}
+</script>
 </head>
 <body>
-<div class="topbar">
+<div class="topbar" role="navigation" aria-label="Primary">
   <div class="nav">
     <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-    <nav class="menu">
+    <nav class="menu" aria-label="Section menu">
       <a href="#abstract">Abstract</a>
       <a href="#intro-design">Intro</a>
       <a href="#mechanics-level">Mechanics</a>
@@ -99,28 +139,27 @@
   </div>
 </div>
 
-<header>
+<header role="banner">
   <div class="wrap hero">
-    <img src="images/ksu-ccse-hero.png" alt="Kennesaw State University CCSE — Software Engineering and Game Development">
+    <img src="images/ksu-ccse-hero.png" alt="Kennesaw State University — CCSE Software Engineering & Game Development">
     <div>
       <span class="tag">Graduate Game Project</span>
       <h1>Infinite Dungeon Survival</h1>
-      <p class="small">A twin-stick roguelike — site from the Game Design Document.</p>
+      <p class="small">A twin-stick roguelike — site generated from the Game Design Document.</p>
     </div>
   </div>
 </header>
 
-<main class="wrap">
-
+<main class="wrap" role="main">
   <section id="abstract" class="card">
     <h2>Abstract</h2>
     <p>Infinite Dungeon Survival is a top-down twin-stick roguelike shooter set in a dystopian arena called The Trials. Players survive escalating waves, earn credits, and buy upgrades between rounds. Built in Unity as a graduate project, the game explores scalable difficulty, responsive controls, and user-centered feedback.</p>
   </section>
 
-  <section id="intro-design">
+  <section id="intro-design" aria-labelledby="intro">
     <div class="grid2">
       <div class="card">
-        <h2>Introduction</h2>
+        <h2 id="intro">Introduction</h2>
         <p>The project addresses the challenge of building a balanced, replayable 2D combat loop that remains engaging over time. Inspired by Enter the Gungeon and Smash TV, we designed a fast-paced arcade experience that rewards mastery and decision-making.</p>
       </div>
       <div class="card">
@@ -130,10 +169,10 @@
     </div>
   </section>
 
-  <section id="mechanics-level">
+  <section id="mechanics-level" aria-labelledby="mechanics">
     <div class="grid2">
       <div class="card">
-        <h2>Mechanics</h2>
+        <h2 id="mechanics">Mechanics</h2>
         <p>Twin-stick controls; wave scaling; credits on kills; a vendor for weapon damage, AoE, and health upgrades. Sound/UI cues signal wave starts, shop phases, hits, and death.</p>
       </div>
       <div class="card">
@@ -143,24 +182,40 @@
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
+  <section id="gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Gallery</h2>
     <div class="grid3">
-      <!-- Replace these placeholders by dropping files into /images with the same names -->
-      <figure class="card"><img class="thumb" src="images/arena1.jpg" alt="Arena shot 1"><figcaption>Arena screenshot</figcaption></figure>
-      <figure class="card"><img class="thumb" src="images/arena2.jpg" alt="Arena shot 2" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena2.jpg';"><figcaption>Placeholder</figcaption></figure>
-      <figure class="card"><img class="thumb" src="images/arena3.jpg" alt="Arena shot 3" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena3.jpg';"><figcaption>Placeholder</figcaption></figure>
-      <figure class="card"><img class="thumb" src="images/arena4.jpg" alt="Arena shot 4" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena4.jpg';"><figcaption>Placeholder</figcaption></figure>
-      <figure class="card"><img class="thumb" src="images/arena5.jpg" alt="Arena shot 5" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena5.jpg';"><figcaption>Placeholder</figcaption></figure>
-      <figure class="card"><img class="thumb" src="images/arena6.jpg" alt="Arena shot 6" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena6.jpg';"><figcaption>Placeholder</figcaption></figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena1.jpg" alt="Gameplay arena view, wave in progress">
+        <figcaption>Arena screenshot</figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena2.jpg" alt="Second gameplay screenshot" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena2.jpg';">
+        <figcaption>Placeholder</figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena3.jpg" alt="Third gameplay screenshot" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena3.jpg';">
+        <figcaption>Placeholder</figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena4.jpg" alt="Fourth gameplay screenshot" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena4.jpg';">
+        <figcaption>Placeholder</figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena5.jpg" alt="Fifth gameplay screenshot" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena5.jpg';">
+        <figcaption>Placeholder</figcaption>
+      </figure>
+      <figure class="card">
+        <img class="thumb" src="images/arena6.jpg" alt="Sixth gameplay screenshot" onerror="this.style.opacity=.25; this.parentElement.querySelector('figcaption').innerHTML='Add images/arena6.jpg';">
+        <figcaption>Placeholder</figcaption>
+      </figure>
     </div>
-    <p class="small">Tip: just drop more images into <code>/images</code> and reference them here, or replace the filenames above.</p>
+    <p class="small">Tip: drop more images into <code>/images</code> and update filenames to show them here.</p>
   </section>
 
-  <section id="videos">
-    <h2>Videos</h2>
+  <section id="videos" class="card" aria-labelledby="videos-title">
+    <h2 id="videos-title">Videos</h2>
     <div class="grid2">
-      <!-- Drop your videos into /videos and point the src to them -->
       <figure class="card">
         <video controls preload="metadata" src="videos/ids-gameplay.m4v"></video>
         <figcaption>Gameplay Demo</figcaption>
@@ -170,24 +225,23 @@
         <figcaption>Short Trailer</figcaption>
       </figure>
     </div>
-    <p class="small">Supported formats: MP4/H.264, WebM, M4V. Keep files under ~200 MB for quick loading on GitHub Pages.</p>
+    <p class="small">Supported formats: MP4/H.264, WebM, M4V. Keep files under ~200 MB for fast loads on GitHub Pages.</p>
   </section>
 
-  <section id="links" class="card">
-    <h2>Team & Links</h2>
+  <section id="links" class="card" aria-labelledby="team-links">
+    <h2 id="team-links">Team & Links</h2>
     <p><strong>Team:</strong></p>
     <ul style="list-style:none; padding-left:0; line-height:1.8;">
-      <li><a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank" style="color:var(--gold); font-weight:600;">Elliotte Wideman</a></li>
-      <li><a href="https://www.linkedin.com/in/hblake3/" target="_blank" style="color:var(--gold); font-weight:600;">Hunter Blake</a></li>
-      <li><a href="https://www.linkedin.com/in/chancelor-brown-04a083241/" target="_blank" style="color:var(--gold); font-weight:600;">Chancelor Brown</a></li>
+      <li><a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank" rel="noopener">Elliotte Wideman</a></li>
+      <li><a href="https://www.linkedin.com/in/hblake3/" target="_blank" rel="noopener">Hunter Blake</a></li>
+      <li><a href="https://www.linkedin.com/in/chancelor-brown-04a083241/" target="_blank" rel="noopener">Chancelor Brown</a></li>
     </ul>
-    <p><strong>Repository:</strong> <a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival" target="_blank">github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival</a></p>
-    <p><strong>GDD:</strong> <a href="Infinite_Dungeon_Survival.pdf" target="_blank">Open PDF</a></p>
+    <p><strong>Repository:</strong> <a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival" target="_blank" rel="noopener">github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival</a></p>
+    <p><strong>GDD:</strong> <a href="Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">Open PDF</a></p>
   </section>
-
 </main>
 
-<footer>
+<footer role="contentinfo">
   <div class="wrap">
     <p>© Team Infinite Dungeon Survival · Updated 2025-11-07. Built for KSU C-Day.</p>
   </div>
