@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="googleb7b2a7c8a23d4940.html">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Infinite Dungeon Survival — Twin-Stick Roguelike | KSU C-Day Graduate Game Project</title>
 <meta name="description" content="Infinite Dungeon Survival is a fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds. View the GDD, screenshots, video, and team links.">
 
-<link rel="canonical" href="https://UPDATE_ME_BASE_URL/">
-<link rel="alternate" hreflang="en" href="https://UPDATE_ME_BASE_URL/">
+<link rel="canonical" href="https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/">
+<link rel="alternate" hreflang="en" href="https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Infinite Dungeon Survival — Twin-Stick Roguelike">
 <meta property="og:description" content="Survive escalating waves, earn credits, and upgrade between rounds. Read the GDD and meet the team.">
-<meta property="og:url" content="https://UPDATE_ME_BASE_URL/">
-<meta property="og:image" content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
+<meta property="og:url" content="https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/">
+<meta property="og:image" content="https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/images/ksu-ccse-hero.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Infinite Dungeon Survival — Twin-Stick Roguelike">
 <meta name="twitter:description" content="Unity-built graduate game project for KSU C-Day. Waves, upgrades, tight controls.">
-<meta name="twitter:image" content="https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png">
+<meta name="twitter:image" content="https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/images/ksu-ccse-hero.png">
 
 <meta name="theme-color" content="#0b0e13">
 
@@ -89,18 +92,17 @@
   .footer-grid { grid-template-columns:1fr; gap:12px; }
   .footer-list li { margin:6px 0; }
 }
-
 </style>
 
-<!-- JSON-LD -->
+<!-- JSON-LD for SEO -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Infinite Dungeon Survival","url":"https://UPDATE_ME_BASE_URL/","potentialAction":{"@type":"SearchAction","target":"https://UPDATE_ME_BASE_URL/?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Infinite Dungeon Survival","url":"https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/","potentialAction":{"@type":"SearchAction","target":"https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"Infinite Dungeon Survival","genre":["Action","Shooter","Roguelike"],"url":"https://UPDATE_ME_BASE_URL/","image":"https://UPDATE_ME_BASE_URL/images/ksu-ccse-hero.png","author":{"@type":"CollegeOrUniversity","name":"Kennesaw State University"},"gamePlatform":["PC","Web"],"publisher":{"@type":"Organization","name":"Team Infinite Dungeon Survival"},"description":"A fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds.","creator":[{"@type":"Person","name":"Elliotte Wideman","sameAs":"https://www.linkedin.com/in/elliottewideman007/"},{"@type":"Person","name":"Hunter Blake","sameAs":"https://www.linkedin.com/in/hblake3/"},{"@type":"Person","name":"Chancelor Brown","sameAs":"https://www.linkedin.com/in/chancelor-brown-04a083241/"}]}
+{"@context":"https://schema.org","@type":"VideoGame","name":"Infinite Dungeon Survival","genre":["Action","Shooter","Roguelike"],"url":"https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/","image":"https://infinitedungeon-team.github.io/Infinite-Dungeon-Survival-Website/images/ksu-ccse-hero.png","author":{"@type":"CollegeOrUniversity","name":"Kennesaw State University"},"gamePlatform":["PC","Web"],"publisher":{"@type":"Organization","name":"Team Infinite Dungeon Survival"},"description":"A fast, twin-stick roguelike built in Unity. Survive escalating waves, earn credits, and upgrade between rounds.","creator":[{"@type":"Person","name":"Elliotte Wideman","sameAs":"https://www.linkedin.com/in/elliottewideman007/"},{"@type":"Person","name":"Hunter Blake","sameAs":"https://www.linkedin.com/in/hblake3/"},{"@type":"Person","name":"Chancelor Brown","sameAs":"https://www.linkedin.com/in/chancelor-brown-04a083241/"}]}
 </script>
 </head>
-<body>
+<body id="top">
 <!-- Header -->
 <div class="topbar" role="navigation" aria-label="Primary">
   <div class="nav">
@@ -256,7 +258,6 @@
   </div>
 </footer>
 
-
 <!-- Mobile menu script -->
 <script>
 (function () {
@@ -264,7 +265,7 @@
   const btn = document.querySelector('.nav-toggle');
   const menu = document.getElementById('primary-menu');
 
-  btn.addEventListener('click', () => {
+  btn?.addEventListener('click', () => {
     const open = topbar.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
@@ -272,14 +273,14 @@
   document.addEventListener('click', (e) => {
     if (!topbar.contains(e.target)) {
       topbar.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      btn?.setAttribute('aria-expanded', 'false');
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       topbar.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
+      btn?.setAttribute('aria-expanded', 'false');
     }
   });
 })();
