@@ -1,168 +1,116 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Infinite Dungeon Survival — Home</title>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/overrides.css" />
-  </head>
-  <body class="homepage is-preload">
-    <div id="page-wrapper">
+<head>
+  <title>Infinite Dungeon Survival — Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Our safe overrides -->
+  <link rel="stylesheet" href="assets/css/overrides.css" />
+</head>
+<body class="homepage">
+  <div id="header">
+    <h1><a href="index.html">IDS</a></h1>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="left-sidebar.html">Gallery</a></li>
+        <li><a href="right-sidebar.html">Videos</a></li>
+        <li><a href="no-sidebar.html">Mechanics</a></li>
+        <li><a href="Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">GDD PDF</a></li>
+      </ul>
+    </nav>
+  </div>
 
-      <!-- Header + Nav -->
-      <section id="header" class="wrapper">
-        <div id="logo">
-          <h1><a href="index.html">IDS — Infinite Dungeon Survival</a></h1>
-          <p>Graduate game project • Kennesaw State University</p>
+  <!-- HERO -->
+  <section class="hero-banner">
+    <div class="wrap">
+      <img src="images/ksu-ccse-hero.png" alt="KSU — CCSE Software Engineering & Game Development">
+      <div>
+        <span class="tag">Graduate Game Project</span>
+        <h1>Infinite Dungeon Survival</h1>
+        <p>A fast, replayable twin-stick roguelike built in Unity. Survive waves, earn credits, and upgrade between rounds.</p>
+        <div class="hero-actions">
+          <a class="btn" href="left-sidebar.html#screenshots">See screenshots</a>
+          <a class="btn alt" href="right-sidebar.html#videos">Watch video</a>
+          <a class="btn" href="Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">Open GDD</a>
         </div>
-        <nav id="nav">
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="left-sidebar.html">Gallery</a></li>
-            <li><a href="right-sidebar.html">Videos</a></li>
-            <li><a href="no-sidebar.html">Mechanics</a></li>
-            <li><a href="docs/IDS-GDD.pdf">GDD PDF</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- HERO (top) -->
-      <section class="ids-hero">
-        <div class="container">
-          <div class="title">INFINITE DUNGEON SURVIVAL</div>
-          <div class="subtitle">Software Engineering &amp; Game Development •
-            KSU CCSE</div>
-        </div>
-      </section>
-
-      <!-- Highlights / feature bullets -->
-      <section id="highlights" class="wrapper style3">
-        <div class="title">Highlights</div>
-        <div class="container">
-          <div class="row aln-center">
-            <div class="col-4 col-12-medium">
-              <section class="highlight">
-                <h3><a href="#">Twin-Stick Combat</a></h3>
-                <p>Controller &amp; KBM friendly with responsive dodge and clear
-                  hit feedback.</p>
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="highlight">
-                <h3><a href="#">Wave Scaling</a></h3>
-                <p>Difficulty ramps each round; survive until the vendor phase
-                  to upgrade.</p>
-              </section>
-            </div>
-            <div class="col-4 col-12-medium">
-              <section class="highlight">
-                <h3><a href="#">Arena Hazards</a></h3>
-                <p>Laser traps constrain space, rewarding smart positioning and
-                  crowd control.</p>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Core features grid -->
-      <section id="main" class="wrapper style2">
-        <div class="title">Core Features</div>
-        <div class="container">
-          <div class="row gtr-150">
-            <div class="col-6 col-12-medium">
-              <div class="box">
-                <header class="style1"><h2>Credits &amp; Vendor</h2></header>
-                <p>Earn credits from kills; buy damage, Area-of-Effect, health,
-                  or utility upgrades between waves.</p>
-              </div>
-            </div>
-            <div class="col-6 col-12-medium">
-              <div class="box">
-                <header class="style1"><h2>Project Links</h2></header>
-                <ul class="style2">
-                  <li><a
-                      href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival">Game
-                      Repo</a></li>
-                  <li><a
-                      href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">Website
-                      Repo</a></li>
-                  <li><a href="docs/IDS-GDD.pdf">Game Design Document
-                      (PDF)</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer (Contact) -->
-      <section id="footer" class="wrapper">
-        <div class="title">Contact</div>
-        <div class="container">
-          <div class="row">
-            <div class="col-6 col-12-medium">
-              <section class="feature-list small">
-                <div class="row">
-                  <div class="col-6 col-12-small">
-                    <section>
-                      <h3 class="icon solid fa-home">Team</h3>
-                      <p>
-                        Elliotte Wideman — <a
-                          href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br />
-                        Hunter Blake — <a
-                          href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br />
-                        Chancelor Brown — <a
-                          href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a>
-                      </p>
-                    </section>
-                  </div>
-                  <div class="col-6 col-12-small">
-                    <section>
-                      <h3 class="icon solid fa-link">Links</h3>
-                      <p>
-                        <a
-                          href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
-                          Repo</a><br />
-                        <a href="docs/IDS-GDD.pdf">GDD (PDF)</a><br />
-                        <a href="left-sidebar.html">Gallery</a> • <a
-                          href="right-sidebar.html">Videos</a>
-                      </p>
-                    </section>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="col-6 col-12-medium">
-              <section class="feature-list small">
-                <div class="row">
-                  <div class="col-12">
-                    <section>
-                      <h3 class="icon solid fa-info-circle">About</h3>
-                      <p>Graduate project built in Unity for KSU CCSE. Theme
-                        adapted for accessibility and speed.</p>
-                    </section>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-          <div id="copyright">
-            <ul><li>&copy; Team Infinite Dungeon Survival.</li><li>Design base:
-                HTML5 UP</li></ul>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
+  </section>
+  <div class="ids-strip"><div class="wrap"><strong>IDS Infinite Dungeon Survival</strong></div></div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- Highlights (example—keeps template structure) -->
+  <div class="wrapper section--gold">
+    <div class="container">
+      <header class="major"><span class="title">HIGHLIGHTS</span></header>
+      <p>A fast, replayable survival arena built in Unity. Waves scale in difficulty, a vendor appears after each wave with damage/AoE/health upgrades, and hazards like laser traps keep movement tactical.</p>
+      <ul class="actions">
+        <li><a href="left-sidebar.html#screenshots" class="button">See Screenshots</a></li>
+        <li><a href="right-sidebar.html#videos" class="button">Watch Video</a></li>
+        <li><a href="Infinite_Dungeon_Survival.pdf" class="button" target="_blank" rel="noopener">Open GDD</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <header class="major"><span class="title">CORE FEATURES</span></header>
+      <div class="row">
+        <div class="6u 12u(mobile)">
+          <h3>Twin-Stick Combat</h3>
+          <p>Controller/KBM friendly; fast movement and shooting with clear hit feedback.</p>
+        </div>
+        <div class="6u 12u(mobile)">
+          <h3>Wave Scaling</h3>
+          <p>Difficulty ramps each round; survive until the timer to reach the vendor phase.</p>
+        </div>
+        <div class="6u 12u(mobile)">
+          <h3>Credits & Vendor</h3>
+          <p>Earn credits from kills; buy damage, AoE, or health upgrades between waves.</p>
+        </div>
+        <div class="6u 12u(mobile)">
+          <h3>Arena Hazards</h3>
+          <p>Laser traps constrain space, rewarding smart positioning and crowd control.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>Team</h3>
+          <p>
+            <strong>Elliotte Wideman</strong> — <a href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br>
+            <strong>Hunter Blake</strong> — <a href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br>
+            <strong>Chancelor Brown</strong> — <a href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a>
+          </p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p>
+            <a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website" target="_blank" rel="noopener">GitHub Repo</a><br>
+            <a href="Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">Game Design Document (PDF)</a><br>
+            <a href="left-sidebar.html">Gallery</a> · <a href="right-sidebar.html">Videos</a>
+          </p>
+        </div>
+        <div>
+          <h3>About</h3>
+          <p>Graduate project built in Unity for KSU C-Day. Theme and layout adapted for accessibility and speed.</p>
+          <small>© Team Infinite Dungeon Survival</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,131 +1,91 @@
-/* IDS site overrides – do NOT edit main.css */
-:root {
-  --ids-bg: #0f1419; /* page background */
-  --ids-panel: #171c22; /* card/section bg */
-  --ids-ink: #e9ecef; /* primary text */
-  --ids-muted: #a9b2bd; /* secondary text */
-  --ids-gold: #e0b646; /* KSU gold accent */
-  --ids-cta: #2a2f36; /* dark button */
-  --ids-cta-ink: #ffffff; /* button text */
-  --ids-hero-fade: linear-gradient(
-    to bottom,
-    rgba(15, 20, 25, 0.75) 0%,
-    rgba(15, 20, 25, 0.95) 60%,
-    rgba(15, 20, 25, 1) 100%
-  );
+/* ===== IDS theme overrides (safe, non-destructive) ===== */
+
+/* KSU black & gold */
+:root{
+  --ids-bg:#0b0e13;
+  --ids-panel:#121820;
+  --ids-ink:#e9eef5;
+  --ids-muted:#b7c1cc;
+  --ids-gold:#f0c14b;
+  --ids-line:#1c2631;
 }
 
-/* Base */
-body {
-  background: var(--ids-bg);
-  color: var(--ids-ink);
+/* GLOBAL BACKGROUND + TEXT */
+body { background:var(--ids-bg); color:var(--ids-ink); }
+a { color:var(--ids-gold); }
+a:hover { text-decoration:underline; }
+
+/* TOP NAV – keep visible on every page */
+#header { background:#0a0f14 !important; border-bottom:3px solid var(--ids-gold); }
+#nav a { color:#e9eef5 !important; }
+#nav a:hover { color:var(--ids-gold) !important; }
+
+/* Remove the template’s faint “watermark banner” band */
+#banner{ display:none !important; }
+
+/* “Hero” used on every page */
+.hero-banner{
+  background:#fff;
+  padding:28px 0;
 }
-a {
-  color: var(--ids-gold);
+.hero-banner .wrap{
+  max-width:1100px; margin:0 auto;
+  display:flex; align-items:center; gap:24px; padding:0 16px;
 }
-.wrapper.style2 {
-  background: var(--ids-panel);
+.hero-banner img{ width:45%; max-width:460px; min-width:260px; height:auto; display:block; }
+.hero-banner .tag{ display:inline-block; background:var(--ids-gold); color:#111; font-weight:800; letter-spacing:.06em; padding:4px 10px; border-radius:999px; font-size:.75rem; }
+.hero-banner h1{ margin:.4rem 0 .25rem; color:#111; font-size:2rem; line-height:1.2; }
+.hero-banner p{ color:#333; margin:.3rem 0; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:.6rem; }
+.hero-actions .btn{
+  display:inline-block; padding:10px 16px; border-radius:8px; font-weight:700; border:0; background:#111; color:#fff;
 }
-.wrapper.style3 {
-  background: #0d1116;
+.hero-actions .btn.alt{ background:#fff; color:#111; outline:2px solid #111; }
+
+/* Gold info strip immediately under hero (“IDS …”) */
+.ids-strip{
+  background:var(--ids-gold); color:#111;
+  padding:18px 0;
 }
-#logo p {
-  color: var(--ids-muted);
+.ids-strip .wrap{ max-width:1100px; margin:0 auto; padding:0 16px; text-align:center; font-weight:700; letter-spacing:.02em; }
+
+/* Section title pill (“SCREENSHOTS”, “GAMEPLAY & TRAILER”, etc.) */
+.major > .title, .title{
+  background:var(--ids-gold) !important; color:#111 !important;
+  display:inline-block; padding:12px 20px; border-radius:8px; box-shadow:0 6px 16px rgba(0,0,0,.15);
 }
 
-/* Nav – improve contrast */
-#nav > ul > li > a {
-  background: #11161c;
-  color: var(--ids-ink);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-#nav > ul > li > a:hover,
-#nav > ul > li.current > a {
-  background: #0b0f14;
-  color: var(--ids-gold);
-  border-color: rgba(224, 182, 70, 0.35);
-}
+/* Cards/panels */
+.wrapper.style1, .wrapper.style2, .wrapper{ background:transparent; }
+.box, .post, .highlight{ background:var(--ids-panel) !important; border:1px solid var(--ids-line); color:var(--ids-ink); }
 
-/* Hero – full-width at top, consistent across pages */
-.ids-hero {
-  position: relative;
-  padding: 6rem 0 3rem;
-  background: var(--ids-hero-fade),
-    url("../images/ksu-csse-hero.png") center/cover no-repeat;
-  text-align: center;
+/* Buttons inside dark sections */
+.button, .actions .button{
+  background:#1a2028; color:#fff !important; border:1px solid #2a3340;
 }
-.ids-hero .title {
-  letter-spacing: 0.12em;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 2.25rem;
-}
-.ids-hero .subtitle {
-  margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-}
+.button:hover{ background:#222b36; }
 
-/* Section title tabs */
-.wrapper .title {
-  background: #11161c;
-  color: var(--ids-ink);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
-}
+/* Gold sections contrast */
+.section--gold{ background:var(--ids-gold); color:#111; }
+.section--gold a{ color:#111; text-decoration:underline; }
 
-/* Cards / content */
-.box,
-.highlight {
-  background: #12171e;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-.box header h2,
-.highlight h3 {
-  color: #fff;
-}
+/* Media */
+video{ width:100%; border-radius:12px; background:#111; }
+img.thumb, .image img{ border-radius:10px; }
 
-/* Lists on dark */
-ul.style2 li article p,
-ul.style3 li a {
-  color: var(--ids-muted);
+/* FOOTER – show contacts everywhere */
+.site-footer{
+  background:#0b0e13; border-top:1px solid var(--ids-line); color:var(--ids-ink);
+  padding:34px 0 46px;
 }
+.site-footer .wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
+.footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:20px; }
+.site-footer h3{ color:var(--ids-gold); font-size:.9rem; margin:.25rem 0 .6rem; letter-spacing:.08em; }
+.site-footer a{ color:var(--ids-gold); }
+.site-footer small{ color:var(--ids-muted); }
 
-/* Buttons */
-.button.style1,
-input[type="submit"].style1 {
-  background: var(--ids-gold);
-  color: #111;
-  border: none;
-}
-.button.style1:hover,
-input[type="submit"].style1:hover {
-  filter: brightness(1.05);
-}
-.button.style2 {
-  background: var(--ids-cta);
-  color: var(--ids-cta-ink);
-}
-
-/* Footer (contact) – keep visible on dark */
-#footer.wrapper {
-  background: #0b0f14;
-}
-#footer h3,
-#footer h2 {
-  color: #fff;
-}
-#footer .feature-list.small h3:before {
-  background: var(--ids-gold);
-}
-
-/* Media tweaks */
-@media (max-width: 980px) {
-  .ids-hero {
-    padding: 4.5rem 0 2.25rem;
-  }
-  .ids-hero .title {
-    font-size: 1.8rem;
-  }
+@media (max-width: 900px){
+  .hero-banner .wrap{ flex-direction:column; text-align:center; }
+  .hero-banner img{ width:100%; max-width:520px; }
+  .footer-grid{ grid-template-columns:1fr; }
 }
