@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Elliotte Wideman — Projects | Infinite Dungeon Survival</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Elliotte Wideman — UI & Audio | Infinite Dungeon Survival</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
     <div class="nav">
       <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
       <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <nav id="primary-menu" class="menu" aria-label="Section menu">
+      <nav id="primary-menu" class="menu">
         <a href="../index.html">Home</a>
         <a href="elliotte.html" aria-current="page">Elliotte</a>
         <a href="hunter.html">Hunter</a>
         <a href="chancler.html">Chancler</a>
-        <a href="../Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">GDD PDF</a>
+        <a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD PDF</a>
       </nav>
     </div>
   </div>
@@ -29,35 +29,77 @@
     <div>
       <span class="tag">Team Portfolio</span>
       <h1>Elliotte Wideman</h1>
-      <p class="small">Audio & SWE • XR/Games • Selected projects below.</p>
+      <p class="small">UI & Music • Audio Engineering • Project Documentation</p>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="card">
-      <h2>Trailer</h2>
-      <video controls preload="metadata" poster="../images/arena1.jpg">
-        <source src="../videos/gameplay-demo.mp4" type="video/mp4">
-      </video>
-      <p class="small">Keep under ~100 MB for best performance.</p>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p><strong>Role:</strong> User Interface and Audio Lead</p>
+      <p><strong>Focus areas:</strong> Game UI layout, sound and background music, and overall documentation.</p>
+      <p class="small">I designed and implemented the in-game UI elements, integrated background music and sound cues, and supported the team with project organization and documentation. Collaboration and shared programming knowledge helped us understand Unity’s workflow together.</p>
     </section>
 
-    <section>
-      <h2>Gallery</h2>
-      <div class="grid3">
-        <figure class="card">
-          <img class="thumb" src="../images/arena1.jpg" alt="Arena shot">
-          <figcaption>Arena prototype</figcaption>
-        </figure>
-        <figure class="card">
-          <img class="thumb" src="../images/arena2.jpg" alt="HUD">
-          <figcaption>HUD pass</figcaption>
-        </figure>
-        <figure class="card">
-          <img class="thumb" src="../images/arena3.jpg" alt="Shop">
-          <figcaption>Shop phase</figcaption>
-        </figure>
+    <section id="contributions">
+      <div class="grid2">
+        <div class="card">
+          <h2>Responsibilities</h2>
+          <ul>
+            <li>Created main and in-game UI screens.</li>
+            <li>Integrated background music and SFX into Unity.</li>
+            <li>Helped document design decisions and code flow.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Key Contributions</h2>
+          <ul>
+            <li>Improved player experience through clean and responsive UI.</li>
+            <li>Balanced music and sound design to match gameplay pace.</li>
+            <li>Helped unify overall project organization in GitHub.</li>
+          </ul>
+        </div>
       </div>
+    </section>
+
+    <section id="tech" class="card">
+      <h2>Tech Stack</h2>
+      <p>Unity • C# • FMOD • Pro Tools • GitHub • Canva • Visual Studio</p>
+    </section>
+
+    <section id="media">
+      <h2>Media</h2>
+      <figure class="card">
+        <video controls preload="metadata" poster="../images/arena1.jpg">
+          <source src="../videos/gameplay-demo.mp4" type="video/mp4">
+        </video>
+        <figcaption>UI and sound integration showcase.</figcaption>
+      </figure>
+      <div class="grid3">
+        <figure class="card"><img class="thumb" src="../images/arena1.jpg" alt="UI screen"><figcaption>Gameplay HUD</figcaption></figure>
+        <figure class="card"><img class="thumb" src="../images/arena2.jpg" alt="Sound area"><figcaption>Audio system test</figcaption></figure>
+        <figure class="card"><img class="thumb" src="../images/arena3.jpg" alt="Pause menu"><figcaption>Pause and score UI</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="reflection" class="card">
+      <h2>What I Learned</h2>
+      <ul>
+        <li>Learned Unity UI systems and audio pipeline integration.</li>
+        <li>Gained teamwork and communication experience with shared codebases.</li>
+        <li>Understood how to design and test for user experience consistency.</li>
+      </ul>
+    </section>
+
+    <section id="links" class="card">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="../index.html">Project Home</a></li>
+        <li><a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD (PDF)</a></li>
+        <li><a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival" target="_blank">Repository</a></li>
+        <li><a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank">LinkedIn</a></li>
+      </ul>
     </section>
   </main>
 
@@ -67,7 +109,6 @@
       <a href="#top" class="back-to-top">↑ Back to top</a>
     </div>
   </footer>
-
   <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
