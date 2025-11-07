@@ -1,87 +1,147 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
+    <title>IDS — Videos</title>
     <meta charset="utf-8" />
-    <title>Videos — IDS</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/overrides.css" />
   </head>
   <body class="right-sidebar is-preload">
     <div id="page-wrapper">
 
-      <div id="header"><!-- existing header/nav --></div>
+      <section id="header" class="wrapper">
+        <div id="logo">
+          <h1><a href="index.html">IDS — Infinite Dungeon Survival</a></h1>
+          <p>Videos</p>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="left-sidebar.html">Gallery</a></li>
+            <li class="current"><a href="right-sidebar.html">Videos</a></li>
+            <li><a href="no-sidebar.html">Mechanics</a></li>
+            <li><a href="docs/IDS-GDD.pdf">GDD PDF</a></li>
+          </ul>
+        </nav>
+      </section>
 
-      <section class="hero hero--videos">
-        <div class="wrap">
-          <h1>GAMEPLAY &amp; TRAILER</h1>
-          <p>Wave Loop · Vendor · Hazards</p>
+      <!-- HERO -->
+      <section class="ids-hero">
+        <div class="container">
+          <div class="title">Gameplay &amp; Trailer</div>
+          <div class="subtitle">Wave scaling, vendor upgrades, and combat
+            loop</div>
         </div>
       </section>
-      <div class="section-tag">Gameplay &amp; Trailer</div>
 
-      <section class="section-paper">
+      <section id="main" class="wrapper style2">
+        <div class="title">Videos</div>
         <div class="container">
-          <!-- your embed + notes/links; example layout -->
-          <div class="row">
+          <div class="row gtr-150">
             <div class="col-8 col-12-medium">
-              <!-- <iframe ...> or <video ...> goes here -->
+              <div id="content">
+                <article class="box post">
+                  <header class="style1"><h2>Gameplay Demo</h2></header>
+                  <!-- Embed -->
+                  <div class="image featured" style="background:#0e0e0e">
+                    <!-- Replace the src with your YouTube embed link -->
+                    <iframe width="100%" height="420"
+                      src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                      title="IDS Gameplay Demo" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </article>
+              </div>
             </div>
+
             <div class="col-4 col-12-medium">
-              <h3>Notes</h3>
-              <p>For GitHub Pages, large videos may load slowly. Consider
-                YouTube hosting and linking here.</p>
-              <h3>Links</h3>
-              <ul>
-                <li><a href="docs/InfiniteDungeon_GDD.pdf">Open GDD PDF</a></li>
-              </ul>
+              <div id="sidebar">
+                <section class="box">
+                  <header><h2>Notes</h2></header>
+                  <p>On GitHub Pages, large videos may load slowly. Consider
+                    also hosting on YouTube and linking here.</p>
+                </section>
+                <section class="box">
+                  <header><h2>Links</h2></header>
+                  <ul class="style3">
+                    <li><a href="docs/IDS-GDD.pdf">Open GDD PDF</a></li>
+                    <li><a href="left-sidebar.html">Open Gallery</a></li>
+                    <li><a href="no-sidebar.html">Mechanics</a></li>
+                  </ul>
+                </section>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- unified footer (same as above) -->
-      <footer id="footer"> <!-- same footer block -->
+      <!-- Footer (same) -->
+      <section id="footer" class="wrapper">
+        <div class="title">Contact</div>
         <div class="container">
+          <!-- same footer block as index -->
           <div class="row">
-            <section class="col-4 col-12-medium">
-              <h3>Team</h3>
-              <ul class="footer-list">
-                <li><strong>Elliotte Wideman</strong> — <a
-                    href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
-                <li><strong>Hunter Blake</strong> — <a
-                    href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a></li>
-                <li><strong>Chancelor Brown</strong> — <a
-                    href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
-              </ul>
-            </section>
-            <section class="col-4 col-12-medium">
-              <h3>Links</h3>
-              <ul class="footer-list">
-                <li><a
-                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
-                    Repo</a></li>
-                <li><a href="docs/InfiniteDungeon_GDD.pdf">Game Design Document
-                    (PDF)</a></li>
-                <li><a href="left-sidebar.html">Gallery</a> · <a
-                    href="no-sidebar.html">Mechanics</a></li>
-              </ul>
-            </section>
-            <section class="col-4 col-12-medium">
-              <h3>About</h3>
-              <p>Graduate project built in Unity for KSU C-Day. Theme/layout
-                adapted for accessibility and speed.</p>
-            </section>
+            <div class="col-6 col-12-medium">
+              <section class="feature-list small">
+                <div class="row">
+                  <div class="col-6 col-12-small">
+                    <section>
+                      <h3 class="icon solid fa-home">Team</h3>
+                      <p>
+                        Elliotte Wideman — <a
+                          href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br />
+                        Hunter Blake — <a
+                          href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br />
+                        Chancelor Brown — <a
+                          href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="col-6 col-12-small">
+                    <section>
+                      <h3 class="icon solid fa-link">Links</h3>
+                      <p>
+                        <a
+                          href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
+                          Repo</a><br />
+                        <a href="docs/IDS-GDD.pdf">GDD (PDF)</a>
+                      </p>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-6 col-12-medium">
+              <section class="feature-list small">
+                <div class="row">
+                  <div class="col-12">
+                    <section>
+                      <h3 class="icon solid fa-info-circle">About</h3>
+                      <p>Video page following Escape Velocity layout with IDS
+                        colors.</p>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
-          <div class="row"><div class="col-12">
-              <ul class="copyright">
-                <li>© Team Infinite Dungeon Survival</li>
-                <li>Updated <span id="build-date">2025-11-07</span></li>
-              </ul>
-            </div></div>
+          <div id="copyright">
+            <ul><li>&copy; Team Infinite Dungeon Survival.</li><li>Design base:
+                HTML5 UP</li></ul>
+          </div>
         </div>
-      </footer>
-
+      </section>
     </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

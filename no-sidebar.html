@@ -1,91 +1,128 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
+    <title>IDS — Mechanics & Level Design</title>
     <meta charset="utf-8" />
-    <title>Mechanics — IDS</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/overrides.css" />
   </head>
   <body class="no-sidebar is-preload">
     <div id="page-wrapper">
 
-      <div id="header"><!-- existing header/nav --></div>
-
-      <section class="hero hero--mechanics">
-        <div class="wrap">
-          <h1>MECHANICS &amp; LEVEL DESIGN</h1>
-          <p>Twin-Stick · Scaling Waves · Vendor</p>
+      <section id="header" class="wrapper">
+        <div id="logo">
+          <h1><a href="index.html">IDS — Infinite Dungeon Survival</a></h1>
+          <p>Mechanics & Level Design</p>
         </div>
-      </section>
-      <div class="section-tag">Mechanics &amp; Level Design</div>
-
-      <section class="band-dark">
-        <div class="container" style="padding:2.2rem 0;">
-          <h3>Core Loop</h3>
+        <nav id="nav">
           <ul>
-            <li>Survive wave → earn credits → vendor phase → upgrade → next
-              wave.</li>
-            <li>Twin-stick controls with responsive dodge &amp; hit
-              feedback.</li>
-            <li>Scaling enemy spawns and hazards increase difficulty.</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="left-sidebar.html">Gallery</a></li>
+            <li><a href="right-sidebar.html">Videos</a></li>
+            <li class="current"><a href="no-sidebar.html">Mechanics</a></li>
+            <li><a href="docs/IDS-GDD.pdf">GDD PDF</a></li>
           </ul>
-
-          <h3>Upgrades</h3>
-          <ul>
-            <li>Damage, Area-of-Effect, Health, and Utility (e.g., movement
-              speed).</li>
-          </ul>
-
-          <h3>Level</h3>
-          <p>Single sealed arena with four spawn gates and rotating hazards
-            (lasers).
-            Score = waves cleared + time survived.</p>
-        </div>
+        </nav>
       </section>
 
-      <!-- unified footer -->
-      <footer id="footer"> <!-- same footer block -->
+      <!-- HERO -->
+      <section class="ids-hero">
         <div class="container">
-          <div class="row">
-            <section class="col-4 col-12-medium">
-              <h3>Team</h3>
-              <ul class="footer-list">
-                <li><strong>Elliotte Wideman</strong> — <a
-                    href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a></li>
-                <li><strong>Hunter Blake</strong> — <a
-                    href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a></li>
-                <li><strong>Chancelor Brown</strong> — <a
-                    href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a></li>
-              </ul>
-            </section>
-            <section class="col-4 col-12-medium">
-              <h3>Links</h3>
-              <ul class="footer-list">
-                <li><a
-                    href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
-                    Repo</a></li>
-                <li><a href="docs/InfiniteDungeon_GDD.pdf">Game Design Document
-                    (PDF)</a></li>
-                <li><a href="left-sidebar.html">Gallery</a> · <a
-                    href="right-sidebar.html">Videos</a></li>
-              </ul>
-            </section>
-            <section class="col-4 col-12-medium">
-              <h3>About</h3>
-              <p>Graduate project built in Unity for KSU C-Day. Theme/layout
-                adapted for accessibility and speed.</p>
-            </section>
-          </div>
-          <div class="row"><div class="col-12">
-              <ul class="copyright">
-                <li>© Team Infinite Dungeon Survival</li>
-                <li>Updated <span id="build-date">2025-11-07</span></li>
-              </ul>
-            </div></div>
+          <div class="title">Mechanics &amp; Level Design</div>
+          <div class="subtitle">Core loop • Upgrades • Level</div>
         </div>
-      </footer>
+      </section>
 
+      <div id="main" class="wrapper style2">
+        <div class="title">Details</div>
+        <div class="container">
+          <div id="content">
+            <article class="box post">
+              <header class="style1">
+                <h2>Core Loop</h2>
+              </header>
+              <p>Survive wave → earn credits → vendor phase → upgrade → next
+                wave.</p>
+
+              <header class="style1"><h2>Upgrades</h2></header>
+              <ul>
+                <li>Damage, Area-of-Effect, Health, and Utility (e.g., movement
+                  speed).</li>
+              </ul>
+
+              <header class="style1"><h2>Level</h2></header>
+              <p>Single sealed arena with four spawn gates and rotating hazards
+                (e.g., lasers). Score = waves cleared + time survived.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer (same) -->
+      <section id="footer" class="wrapper">
+        <div class="title">Contact</div>
+        <div class="container">
+          <!-- reuse same footer block as index -->
+          <div class="row">
+            <div class="col-6 col-12-medium">
+              <section class="feature-list small">
+                <div class="row">
+                  <div class="col-6 col-12-small">
+                    <section>
+                      <h3 class="icon solid fa-home">Team</h3>
+                      <p>
+                        Elliotte Wideman — <a
+                          href="mailto:ewideman@students.kennesaw.edu">ewideman@students.kennesaw.edu</a><br />
+                        Hunter Blake — <a
+                          href="mailto:hblake3@students.kennesaw.edu">hblake3@students.kennesaw.edu</a><br />
+                        Chancelor Brown — <a
+                          href="mailto:cbrown@students.kennesaw.edu">cbrown@students.kennesaw.edu</a>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="col-6 col-12-small">
+                    <section>
+                      <h3 class="icon solid fa-link">Links</h3>
+                      <p>
+                        <a
+                          href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival-Website">GitHub
+                          Repo</a><br />
+                        <a href="docs/IDS-GDD.pdf">GDD (PDF)</a>
+                      </p>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-6 col-12-medium">
+              <section class="feature-list small">
+                <div class="row">
+                  <div class="col-12">
+                    <section>
+                      <h3 class="icon solid fa-info-circle">About</h3>
+                      <p>Mechanics page following Escape Velocity layout with
+                        IDS colors.</p>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div id="copyright">
+            <ul><li>&copy; Team Infinite Dungeon Survival.</li><li>Design base:
+                HTML5 UP</li></ul>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

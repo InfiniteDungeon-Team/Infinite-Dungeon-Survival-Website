@@ -1,103 +1,131 @@
-/* ===== IDS site overrides (color-safe, template-accurate) ===== */
-:root{
-  --bg:#0f1419;          /* page background (near-black/charcoal) */
-  --panel:#121920;       /* dark sections */
-  --paper:#ffffff;       /* light sections */
-  --ink:#1b2129;         /* body text on light */
-  --muted:#9aa6b2;       /* secondary text */
-  --brand:#e6b400;       /* KSU gold */
-  --brand-2:#e3716a;     /* coral (template accent) */
-  --card-shadow:0 10px 28px rgba(0,0,0,.16), 0 2px 6px rgba(0,0,0,.12);
+/* IDS site overrides – do NOT edit main.css */
+:root {
+  --ids-bg: #0f1419; /* page background */
+  --ids-panel: #171c22; /* card/section bg */
+  --ids-ink: #e9ecef; /* primary text */
+  --ids-muted: #a9b2bd; /* secondary text */
+  --ids-gold: #e0b646; /* KSU gold accent */
+  --ids-cta: #2a2f36; /* dark button */
+  --ids-cta-ink: #ffffff; /* button text */
+  --ids-hero-fade: linear-gradient(
+    to bottom,
+    rgba(15, 20, 25, 0.75) 0%,
+    rgba(15, 20, 25, 0.95) 60%,
+    rgba(15, 20, 25, 1) 100%
+  );
 }
 
-/* Global */
-body{ background:var(--bg); color:#e9eef3; }
-a{ color:var(--brand); }
-a:hover,a:focus{ color:#ffce00; text-decoration:none; }
-
-/* Header/Nav (readable over hero) */
-#header{ background:transparent; }
-#nav>ul>li>a{
-  color:#e9eef3 !important;
-  border-color:rgba(233,238,243,.18) !important;
+/* Base */
+body {
+  background: var(--ids-bg);
+  color: var(--ids-ink);
 }
-#nav>ul>li>a:hover{ color:var(--brand) !important; }
-
-/* Remove the tiny strip under the header */
-.ids-strip{ display:none !important; }
-
-/* HERO */
-.hero{
-  position:relative;
-  min-height:360px;
-  padding:132px 0 144px;
-  display:flex; align-items:center; justify-content:center;
-  text-align:center; color:#fff;
-  background-size:cover; background-position:center;
+a {
+  color: var(--ids-gold);
 }
-.hero::before{
-  content:""; position:absolute; inset:0;
-  background:radial-gradient(ellipse at 50% 40%, rgba(9,13,17,.35), rgba(9,13,17,.72));
+.wrapper.style2 {
+  background: var(--ids-panel);
 }
-.hero .wrap{ position:relative; z-index:1; }
-.hero h1{
-  letter-spacing:.18em; font-weight:800;
-  font-size:clamp(28px,3.6vw,44px); margin:0 0 .35rem 0;
+.wrapper.style3 {
+  background: #0d1116;
 }
-.hero p{ margin:0; opacity:.85; letter-spacing:.18em; text-transform:uppercase; font-size:.95rem; }
-
-/* Per-page hero images (point to real images you have) */
-.hero--home{      background-image:url("images/ksu-csse-hero.jpg"); }
-.hero--gallery{   background-image:url("images/arena1.jpg"); }
-.hero--videos{    background-image:url("images/arena2.jpg"); }
-.hero--mechanics{ background-image:url("images/arenal.jpg"); }
-
-/* Section title “card” under hero */
-.section-tag{
-  margin:-36px auto 2.25rem;
-  background:var(--paper); color:var(--ink);
-  border-radius:6px; box-shadow:var(--card-shadow);
-  padding:18px 26px; width:min(720px,86%);
-  text-align:center; letter-spacing:.28em; text-transform:uppercase; font-weight:700;
+#logo p {
+  color: var(--ids-muted);
 }
 
-/* Light and dark bands */
-.section-paper{ background:var(--paper); color:var(--ink); }
-.section-paper p{ color:var(--muted); }
-.band-gold{ background:var(--brand); color:#1b1b1b; }
-.band-dark{ background:var(--panel); }
+/* Nav – improve contrast */
+#nav > ul > li > a {
+  background: #11161c;
+  color: var(--ids-ink);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+#nav > ul > li > a:hover,
+#nav > ul > li.current > a {
+  background: #0b0f14;
+  color: var(--ids-gold);
+  border-color: rgba(224, 182, 70, 0.35);
+}
+
+/* Hero – full-width at top, consistent across pages */
+.ids-hero {
+  position: relative;
+  padding: 6rem 0 3rem;
+  background: var(--ids-hero-fade),
+    url("../images/ksu-csse-hero.png") center/cover no-repeat;
+  text-align: center;
+}
+.ids-hero .title {
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+.ids-hero .subtitle {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+}
+
+/* Section title tabs */
+.wrapper .title {
+  background: #11161c;
+  color: var(--ids-ink);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Cards / content */
+.box,
+.highlight {
+  background: #12171e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.box header h2,
+.highlight h3 {
+  color: #fff;
+}
+
+/* Lists on dark */
+ul.style2 li article p,
+ul.style3 li a {
+  color: var(--ids-muted);
+}
 
 /* Buttons */
-.button.primary{ background:#21262d; color:#fff; border:0; }
-.button.primary:hover{ filter:brightness(1.1); }
-.button.ghost{ background:transparent; border:2px solid #2c3440; color:#e9eef3; }
-.button.ghost:hover{ border-color:#3a4656; }
-.button.gold{ background:var(--brand); color:#1b1b1b; border:0; }
-.button.gold:hover{ filter:brightness(1.07); }
-
-/* Features / icons */
-.features .row{ row-gap:36px; }
-.features .icon{
-  background:#2a313a; width:64px; height:64px; border-radius:50%;
-  display:grid; place-items:center; margin-right:18px; flex:0 0 64px;
+.button.style1,
+input[type="submit"].style1 {
+  background: var(--ids-gold);
+  color: #111;
+  border: none;
+}
+.button.style1:hover,
+input[type="submit"].style1:hover {
+  filter: brightness(1.05);
+}
+.button.style2 {
+  background: var(--ids-cta);
+  color: var(--ids-cta-ink);
 }
 
-/* Footer unified */
-#footer{ background:#181e25; color:#d7dde5; }
-#footer h3{ color:#fff; letter-spacing:.18em; text-transform:uppercase; font-size:.9rem; }
-#footer a{ color:var(--brand); }
-#footer a:hover{ color:#ffd54d; }
-
-/* Contrast for links on gold band */
-.band-gold a{ color:#15202b; text-decoration:underline; }
-.band-gold a:hover{ color:#111; }
-
-/* Responsive */
-@media (max-width:980px){
-  .hero{ padding:108px 0 124px; }
-  .section-tag{ width:92%; }
+/* Footer (contact) – keep visible on dark */
+#footer.wrapper {
+  background: #0b0f14;
 }
-@media (max-width:736px){
-  #nav>ul>li>a{ border-color:transparent !important; }
-  .hero h1{ letter-spacing:.12em; }
+#footer h3,
+#footer h2 {
+  color: #fff;
+}
+#footer .feature-list.small h3:before {
+  background: var(--ids-gold);
+}
+
+/* Media tweaks */
+@media (max-width: 980px) {
+  .ids-hero {
+    padding: 4.5rem 0 2.25rem;
+  }
+  .ids-hero .title {
+    font-size: 1.8rem;
+  }
 }
