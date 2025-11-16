@@ -3,82 +3,95 @@ document.addEventListener('DOMContentLoaded', function () {
   // -------- NAV / HAMBURGER --------
   var topbar = document.querySelector('.topbar');
   var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('primary-menu');
 
-  if (btn && topbar) {
+  function closeNav() {
+    if (!topbar || !btn) return;
+    topbar.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  if (topbar && btn && menu) {
+    // Toggle menu when hamburger is clicked
     btn.addEventListener('click', function (e) {
       e.stopPropagation(); // don't let this click bubble to document
-      var open = topbar.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var isOpen = topbar.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
+    // Close nav when clicking outside of the topbar
     document.addEventListener('click', function (e) {
       if (!topbar.contains(e.target)) {
-        topbar.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
+        closeNav();
       }
     });
   }
 
   // -------- IMAGE LIGHTBOX --------
   var lightbox = document.getElementById('lightbox');
-  var lbImg = lightbox ? lightbox.querySelector('img') : null;
-  var lbCaption = lightbox ? lightbox.querySelector('figcaption') : null;
-  var lbClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
 
-  function openLightbox(imgElement) {
-    if (!lightbox || !lbImg) return;
+  if (lightbox) {
+    var lbImg = lightbox.querySelector('img');
+    var lbCaption = lightbox.querySelector('figcaption');
+    var lbClose = lightbox.querySelector('.lightbox-close');
 
-    lbImg.src = imgElement.src;
-    lbImg.alt = imgElement.alt || '';
+    function openLightbox(imgElement) {
+      if (!lbImg) return;
 
-    if (lbCaption) {
-      var parentFig = imgElement.closest('figure');
-      var figcap = parentFig ? parentFig.querySelector('figcaption') : null;
-      lbCaption.textContent = figcap ? figcap.textContent : '';
+      // Use the thumbnail source for now
+      lbImg.src = imgElement.src;
+      lbImg.alt = imgElement.alt || '';
+
+      if (lbCaption) {
+        var parentFig = imgElement.closest('figure');
+        var figcap = parentFig ? parentFig.querySelector('figcaption') : null;
+        lbCaption.textContent = figcap ? figcap.textContent : '';
+      }
+
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
     }
 
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden', 'false');
-  }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
 
-  function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.classList.remove('open');
-    lightbox.setAttribute('aria-hidden', 'true');
-  }
-
-  // Attach click handlers to all gallery thumbs
-  document.querySelectorAll('img.thumb').forEach(function (img) {
-    img.addEventListener('click', function () {
-      openLightbox(img);
+    // Click on any gallery thumbnail to open
+    document.querySelectorAll('img.thumb').forEach(function (img) {
+      img.addEventListener('click', function () {
+        openLightbox(img);
+      });
     });
-  });
 
-  // Close button
-  if (lbClose) {
-    lbClose.addEventListener('click', function (e) {
-      e.stopPropagation();
-      closeLightbox();
-    });
-  }
+    // Close button (X)
+    if (lbClose) {
+      lbClose.addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeLightbox();
+      });
+    }
 
-  // Click outside the inner card to close
-  if (lightbox) {
+    // Click outside the inner card to close
     lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) {
         closeLightbox();
       }
     });
-  }
 
-  // Esc key closes both nav + lightbox
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if (topbar && btn) {
-        topbar.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
+    // Esc key closes lightbox and nav
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeNav();
       }
-      closeLightbox();
-    }
-  });
+    });
+  } else {
+    // Even if lightbox doesn't exist, still let Esc close the nav
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeNav();
+      }
+    });
+  }
 });
