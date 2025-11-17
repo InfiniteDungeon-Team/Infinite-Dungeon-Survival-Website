@@ -14,20 +14,29 @@
 </head>
 
 <body id="top">
+  
   <!-- NAV -->
-  <div class="topbar">
+  <div class="topbar" role="navigation" aria-label="Primary">
     <div class="nav">
-      <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-      <button class="nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="logo">
+        <a href="../index.html">
+          <span>IDS</span> Infinite Dungeon Survival
+        </a>
+      </div>
 
-      <nav id="primary-menu" class="menu">
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-menu" class="menu" aria-label="Section menu">
         <a href="../index.html">Home</a>
         <a href="elliotte.html">Elliotte</a>
-        <a href="hunter.html">Hunter</a>
         <a href="chancler.html">Chancler</a>
+        <a href="hunter.html">Hunter</a>
       </nav>
     </div>
   </div>
+
 
   <!-- HERO -->
   <header class="wrap hero">
