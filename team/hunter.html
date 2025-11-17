@@ -1,218 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Hunter Blake — UI/UX & Systems Design | Infinite Dungeon Survival</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunter Blake – Infinite Dungeon Survival Team</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet">
+<body>
 
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
-
-    <!-- Responsive YouTube embeds -->
-    <style>
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-      }
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- NAV / TOPBAR -->
-    <div class="topbar">
-      <div class="nav">
-        <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-
-        <!-- Mobile toggle -->
-        <button class="nav-toggle" aria-controls="primary-menu"
-          aria-expanded="false" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-
-        <nav id="primary-menu" class="menu">
-          <a href="../index.html">Home</a>
-          <a href="elliotte.html">Elliotte</a>
-          <a href="hunter.html" aria-current="page">Hunter</a>
-          <a href="chancler.html">Chancler</a>
-          <a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD PDF</a>
-        </nav>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <nav class="nav">
+      <div class="logo"><a href="../index.html">INFINITE <span>DUNGEON</span></a></div>
+      <button class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu" id="menu">
+        <a href="../index.html">Home</a>
+        <a href="elliotte.html">Elliotte</a>
+        <a href="chancler.html">Chancler</a>
+        <a href="hunter.html" class="active">Hunter</a>
       </div>
-    </div>
+    </nav>
+  </div>
+
+  <main class="wrap">
 
     <!-- HERO -->
-    <header class="wrap hero">
-      <img src="../images/ksu-ccse-hero.png" alt="">
-      <div>
-        <span class="tag">Team Portfolio</span>
-        <h1>Hunter Blake</h1>
-        <p class="small">UI/UX Designer • Game Systems & Interface Flow</p>
-      </div>
-    </header>
+    <section class="hero">
+      <img src="/images/Hunter.jpg" alt="Hunter Blake" style="max-width: 220px; border-radius: 50%;">
+      <h1>Hunter Blake</h1>
+      <span class="tag">Developer • Designer • Accountant</span>
+    </section>
 
-    <main class="wrap">
 
-      <!-- ABOUT -->
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p><strong>Role:</strong> UI/UX Designer and Systems Designer</p>
-        <p><strong>Focus areas:</strong> Player interface, menu systems, user flow, and visual clarity for gameplay.</p>
-        <p class="small">
-          I designed the core user interface for Infinite Dungeon Survival,
-          including menu layouts, in-game HUD elements, and interaction flow.
-          My work focuses on ensuring everything feels intuitive and readable
-          for players while matching the theme of the game.
-        </p>
-      </section>
+    <!-- ABOUT -->
+    <section class="card">
+      <h2>About Me</h2>
 
-      <!-- RESPONSIBILITIES -->
-      <section id="contributions">
-        <div class="grid2">
-          <div class="card">
-            <h2>Responsibilities</h2>
-            <ul>
-              <li>Designed menu screens, HUD layout, and interface flow.</li>
-              <li>Created visual assets for UI components.</li>
-              <li>Collaborated on gameplay readability and player communication.</li>
-            </ul>
-          </div>
+      <p>
+        I’ve built my career across two parallel tracks — <strong>finance/accounting</strong>
+        and <strong>technology</strong>. Today I work as a
+        <strong>Senior Accountant at Central Connecticut Coast YMCA</strong>,
+        where I combine analytical thinking with my passion for building
+        technology-driven solutions.
+      </p>
 
-          <div class="card">
-            <h2>Key Contributions</h2>
-            <ul>
-              <li>Improved navigation flow for player menus.</li>
-              <li>Developed clear visual hierarchy across UI elements.</              >
-              <li>Helped shape the aesthetic and usability of the game.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <p>
+        My interest in software engineering led me to pursue a
+        <strong>Master of Science in Software Engineering</strong>.
+        Through the program, I have gained experience in web development,
+        system design, task automation, and full-stack project work that
+        directly connects to business operations and workflow improvement.
+      </p>
 
-      <!-- TECH -->
-      <section id="tech" class="card">
-        <h2>Tech Stack</h2>
-        <p>Unity • C# • UI Toolkit • GitHub • Visual Studio</p>
-      </section>
+      <p>
+        Before transitioning into accounting, I spent several years as a
+        <strong>game developer and co-owner</strong> of Telefrag Entertainment, LLC—
+        where I collaborated on gameplay design, level layouts, pixel art,
+        and mechanic implementation. This background continues to drive my
+        passion for game design and interactive systems.
+      </p>
+    </section>
 
-      <!-- OTHER PROJECTS (Elliotte + Hunter together) -->
-      <section id="projects" class="card">
-        <h2>Other Projects We Worked On</h2>
-        <ul>
-          <li>
-            <strong>UBID Online Auction System — Requirements Engineering</strong><br>
-            Built full documentation including use cases, DFDs, and a video walkthrough.
-          </li>
 
-          <li>
-            <strong>Requirements Validation — Smart Home Automation System</strong><br>
-            Showcased how we validated requirements with test cases and stakeholder checks.
-          </li>
+    <!-- EXPERIENCE -->
+    <section class="card">
+      <h2>Experience</h2>
 
-          <li>
-            <strong>Requirements Elicitation — Smart Home Automation System</strong><br>
-            Demonstrated an elicitation interview for gathering requirements.
-          </li>
-        </ul>
-      </section>
+      <h3>Senior Accountant — Central Connecticut Coast YMCA</h3>
+      <p class="small">Jun 2025 – Present • New Haven, CT • Hybrid</p>
+      <p>Responsible for general ledger management, financial reporting, and supporting large-scale accounting operations.</p>
 
-      <!-- VIDEOS -->
-      <section id="project-videos">
-        <h2>Project Videos</h2>
+      <h3>Accountant — Goodwill of Western & Northern Connecticut</h3>
+      <p class="small">Jan 2023 – Jun 2025 • Bridgeport, CT • On-site</p>
+      <p>Managed A/R, A/P, reconciliations, and operational accounting processes.</p>
 
-        <div class="grid2">
+      <h3>Game Developer / Co-Owner — Telefrag Entertainment</h3>
+      <p class="small">2018 – 2023 • On-site</p>
+      <p>Co-developed gameplay systems, pixel art, combat mechanics, and level design for independent game projects.</p>
+    </section>
 
-          <!-- UBID -->
-          <figure class="card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/-ZaHCMiuxE0?si=l0PFA8c7jFE7r0tu"
-                title="UBID Online Auction System"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <figcaption>UBID Online Auction System — Requirements Project</figcaption>
-          </figure>
 
-          <!-- Validation -->
-          <figure class="card">
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/IetucvQaaLs?si=y9dhR2GsZboRKNkL"
-                title="Requirements Validation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <figcaption>Requirements Validation — Smart Home Automation System</figcaption>
-          </figure>
+    <!-- OTHER PROJECTS WITH YOU -->
+    <section class="card">
+      <h2>Projects with Elliotte Wideman</h2>
+      <p>Here are several requirements engineering and software development projects I collaborated on with Elliotte.</p>
 
-        </div>
-
-        <!-- Elicitation -->
-        <figure class="card" style="margin-top:16px;">
+      <div class="grid2">
+        <figure class="card">
           <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/ytfXdI5lkU8?si=5CtkMb9Te6rI3nU3"
-              title="Requirements Elicitation"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+            <iframe src="https://www.youtube.com/embed/-ZaHCMiuxE0"
+              title="UBID Online Auction System"
               allowfullscreen></iframe>
           </div>
-          <figcaption>Requirements Elicitation — Smart Home Automation System</figcaption>
+          <figcaption>UBID Online Auction System – Requirements Project</figcaption>
         </figure>
 
-      </section>
-
-      <!-- REFLECTION -->
-      <section id="reflection" class="card">
-        <h2>What I Learned</h2>
-        <ul>
-          <li>Improved UI/UX design workflow inside Unity.</li>
-          <li>Learned how to communicate gameplay information visually.</li>
-          <li>Developed strong collaboration skills through interface iteration with the team.</li>
-        </ul>
-      </section>
-
-      <!-- LINKS -->
-      <section id="links" class="card">
-        <h2>Links</h2>
-        <ul>
-          <li><a href="../index.html">Project Home</a></li>
-          <li><a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD (PDF)</a></li>
-          <li><a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival"
-              target="_blank">Repository</a></li>
-          <li><a href="https://www.linkedin.com/in/hunter-blake-935a92245/"
-              target="_blank">LinkedIn</a></li>
-        </ul>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="wrap footer-meta">
-        <span>© Team Infinite Dungeon Survival</span>
-        <span class="spacer"></span>
-        <a href="#top" class="back-to-top">↑ Back to top</a>
+        <figure class="card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/IetucvQaaLs"
+              title="Requirements Validation"
+              allowfullscreen></iframe>
+          </div>
+          <figcaption>Requirements Validation – Smart Home Automation</figcaption>
+        </figure>
       </div>
-    </footer>
 
-    <script src="../assets/js/main.js" defer></script>
-  </body>
+      <figure class="card" style="margin-top: 14px;">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/ytfXdI5lkU8"
+            title="Requirements Elicitation"
+            allowfullscreen></iframe>
+        </div>
+        <figcaption>Requirements Elicitation – Smart Home Automation</figcaption>
+      </figure>
+    </section>
+
+
+    <!-- GAME ART & SCREENSHOTS -->
+    <section class="card">
+      <h2>Game Art & Screenshots</h2>
+      <p>Below are gameplay scenes and sprite work I created for Infinite Dungeon Survival.</p>
+
+      <div class="grid2">
+
+        <figure>
+          <img src="/images/Hunter1.jpg" class="thumb" alt="Hunter game screenshot">
+          <figcaption>Initial arena layout</figcaption>
+        </figure>
+
+        <figure>
+          <img src="/images/Hunter2.jpg" class="thumb" alt="Hunter game screenshot">
+          <figcaption>Enemy encounter and shooting</figcaption>
+        </figure>
+
+        <figure>
+          <img src="/images/Hunter3.jpg" class="thumb" alt="Hunter game screenshot">
+          <figcaption>Movement and dual-shooting animation</figcaption>
+        </figure>
+
+        <figure>
+          <img src="/images/Hunter4.jpg" class="thumb" alt="Hunter game screenshot">
+          <figcaption>Spawn system with multiple enemies</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <figure class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+
+</body>
 </html>

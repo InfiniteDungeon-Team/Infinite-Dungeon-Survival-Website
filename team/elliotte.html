@@ -1,114 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Elliotte Wideman — UI & Audio | Infinite Dungeon Survival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Elliotte Wideman — Media Production & Software Engineering</title>
+  <meta name="description" content="Portfolio page for Elliotte Wideman, Media Production Specialist & Graduate Research Assistant in Software Engineering at KSU.">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
+
+<body id="top">
+  <!-- NAV -->
   <div class="topbar">
     <div class="nav">
       <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+
       <nav id="primary-menu" class="menu">
         <a href="../index.html">Home</a>
-        <a href="elliotte.html" aria-current="page">Elliotte</a>
+        <a href="elliotte.html">Elliotte</a>
         <a href="hunter.html">Hunter</a>
         <a href="chancler.html">Chancler</a>
-        <a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD PDF</a>
       </nav>
     </div>
   </div>
 
+  <!-- HERO -->
   <header class="wrap hero">
-    <img src="../images/ksu-ccse-hero.png" alt="">
+    <img src="../images/Elliotte.jpg" alt="Elliotte Wideman portrait" style="max-width:220px; border-radius:50%; border:6px solid #000;">
     <div>
-      <span class="tag">Team Portfolio</span>
+      <span class="tag">Media Production • Software Engineering</span>
       <h1>Elliotte Wideman</h1>
-      <p class="small">UI & Music • Audio Engineering • Project Documentation</p>
+      <p class="small">Graduate Research Assistant · Aspiring Software Engineer · Projected Graduation: <strong>May 2026</strong></p>
     </div>
   </header>
 
   <main class="wrap">
 
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p><strong>Role:</strong> User Interface and Audio Lead</p>
-      <p><strong>Focus areas:</strong> Game UI layout, sound and background music, and overall documentation.</p>
-      <p class="small">I designed and implemented the in-game UI elements, integrated background music and sound cues, and supported the team with project organization and documentation. Collaboration and shared programming knowledge helped us understand Unity’s workflow together.</p>
+    <!-- ABOUT -->
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        I’m a media production specialist transitioning into software engineering, currently pursuing my Master’s at Kennesaw State University (graduating May 2026).
+        I blend audio engineering, software development, and user-focused design across game development and XR education projects.
+      </p>
     </section>
 
-    <section id="contributions">
+    <!-- EXPERIENCE — ONLY GRA + STREAMCUT -->
+    <section>
+      <h2>Experience</h2>
+
       <div class="grid2">
-        <div class="card">
-          <h2>Responsibilities</h2>
-          <ul>
-            <li>Created main and in-game UI screens.</li>
-            <li>Integrated background music and SFX into Unity.</li>
-            <li>Helped document design decisions and code flow.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h2>Key Contributions</h2>
-          <ul>
-            <li>Improved player experience through clean and responsive UI.</li>
-            <li>Balanced music and sound design to match gameplay pace.</li>
-            <li>Helped unify overall project organization in GitHub.</li>
-          </ul>
-        </div>
+        <!-- GRA -->
+        <article class="card">
+          <h3>Graduate Research Assistant — Kennesaw State University</h3>
+          <p class="small">Jul 2024 – May 2025 · XR Engineering</p>
+          <p class="small">
+            Develop beginner-friendly XR engineering learning materials, focusing on accessibility, requirements engineering, and educational content for CCSE.
+          </p>
+        </article>
+
+        <!-- STREAMCUT -->
+        <article class="card">
+          <h3>Audio Engineer / Assistant Studio Manager — StreamCut Media</h3>
+          <p class="small">Oct 2019 – Feb 2022 · Atlanta, GA</p>
+          <p class="small">
+            Started as an Audio Engineer Intern and grew into Assistant Studio Manager.
+            Led recording sessions, managed studio workflow, and delivered high-quality audio for artists.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section id="tech" class="card">
-      <h2>Tech Stack</h2>
-      <p>Unity • C# • FMOD • Pro Tools • GitHub • Canva • Visual Studio</p>
+    <!-- GOALS -->
+    <section class="card">
+      <h2>Career Goals</h2>
+      <p class="small">
+        I’m strengthening my software engineering foundation through <strong>DS&A practice, LeetCode, and HackerRank</strong>.
+        I am open to internships in software development, XR, multimedia, or audio tech.
+      </p>
+      <p class="small">
+        My dream is to work in <strong>music technology</strong> — ideally at Avid Technology — or launch my own company building <strong>audio plugins, effects, and hardware</strong>.
+      </p>
     </section>
 
-    <section id="media">
-      <h2>Media</h2>
-      <figure class="card">
-        <video controls preload="metadata" poster="../images/arena1.jpg">
-          <source src="../videos/gameplay-demo.mp4" type="video/mp4">
-        </video>
-        <figcaption>UI and sound integration showcase.</figcaption>
-      </figure>
+    <!-- PROJECTS WITH HUNTER -->
+    <section>
+      <h2>Projects With Hunter</h2>
+      <div class="grid2">
+        <!-- UBID -->
+        <figure class="card">
+          <div style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe src="https://www.youtube.com/embed/-ZaHCMiuxE0" allowfullscreen style="position:absolute;width:100%;height:100%;"></iframe>
+          </div>
+          <figcaption class="small">UBID Online Auction System — Requirements Engineering</figcaption>
+        </figure>
+
+        <!-- Validation -->
+        <figure class="card">
+          <div style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe src="https://www.youtube.com/embed/IetucvQaaLs" allowfullscreen style="position:absolute;width:100%;height:100%;"></iframe>
+          </div>
+          <figcaption class="small">Requirements Validation — Smart Home Automation</figcaption>
+        </figure>
+
+        <!-- Elicitation -->
+        <figure class="card">
+          <div style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe src="https://www.youtube.com/embed/ytfXdI5lkU8" allowfullscreen style="position:absolute;width:100%;height:100%;"></iframe>
+          </div>
+          <figcaption class="small">Requirements Elicitation — Smart Home Automation</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- UI SECTION YOU WILL FILL LATER -->
+    <section id="ui-gallery">
+      <h2>UI & Game Contributions</h2>
+      <p class="small">I designed portions of the UI for Infinite Dungeon Survival. I will add screenshots soon.</p>
+
       <div class="grid3">
-        <figure class="card"><img class="thumb" src="../images/arena1.jpg" alt="UI screen"><figcaption>Gameplay HUD</figcaption></figure>
-        <figure class="card"><img class="thumb" src="../images/arena2.jpg" alt="Sound area"><figcaption>Audio system test</figcaption></figure>
-        <figure class="card"><img class="thumb" src="../images/arena3.jpg" alt="Pause menu"><figcaption>Pause and score UI</figcaption></figure>
+        <figure class="card">
+          <img src="../images/elliotte-ui-1.jpg" alt="UI image placeholder"
+               onerror="this.style.opacity=.3; this.parentElement.querySelector('figcaption').innerHTML='Add elliotte-ui-1.jpg';">
+          <figcaption class="small">Main Menu UI</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="../images/elliotte-ui-2.jpg" alt="UI image placeholder"
+               onerror="this.style.opacity=.3; this.parentElement.querySelector('figcaption').innerHTML='Add elliotte-ui-2.jpg';">
+          <figcaption class="small">HUD / Gameplay UI</figcaption>
+        </figure>
+
+        <figure class="card">
+          <img src="../images/elliotte-ui-3.jpg" alt="UI image placeholder"
+               onerror="this.style.opacity=.3; this.parentElement.querySelector('figcaption').innerHTML='Add elliotte-ui-3.jpg';">
+          <figcaption class="small">Upgrade Menu</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="reflection" class="card">
-      <h2>What I Learned</h2>
-      <ul>
-        <li>Learned Unity UI systems and audio pipeline integration.</li>
-        <li>Gained teamwork and communication experience with shared codebases.</li>
-        <li>Understood how to design and test for user experience consistency.</li>
-      </ul>
-    </section>
-
-    <section id="links" class="card">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="../index.html">Project Home</a></li>
-        <li><a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD (PDF)</a></li>
-        <li><a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival" target="_blank">Repository</a></li>
-        <li><a href="https://www.linkedin.com/in/elliottewideman007/" target="_blank">LinkedIn</a></li>
-      </ul>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-meta">
-      <span>© Team Infinite Dungeon Survival</span><span class="spacer"></span>
-      <a href="#top" class="back-to-top">↑ Back to top</a>
+      <span>© Team Infinite Dungeon Survival</span>
+      <span>·</span>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
+
   <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
