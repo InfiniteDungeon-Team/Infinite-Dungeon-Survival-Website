@@ -9,21 +9,28 @@
 
 <body>
 
-  <!-- Top Navigation -->
-  <div class="topbar">
-    <nav class="nav">
-      <div class="logo"><a href="../index.html">INFINITE <span>DUNGEON</span></a></div>
-      <button class="nav-toggle" id="navToggle">
+  <!-- NAV -->
+  <div class="topbar" role="navigation" aria-label="Primary">
+    <div class="nav">
+      <div class="logo">
+        <a href="../index.html">
+          <span>IDS</span> Infinite Dungeon Survival
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-      <div class="menu" id="menu">
+
+      <nav id="primary-menu" class="menu" aria-label="Section menu">
         <a href="../index.html">Home</a>
         <a href="elliotte.html">Elliotte</a>
         <a href="chancler.html">Chancler</a>
-        <a href="hunter.html" class="active">Hunter</a>
-      </div>
-    </nav>
+        <a href="hunter.html">Hunter</a>
+      </nav>
+    </div>
   </div>
+
 
   <main class="wrap">
 
