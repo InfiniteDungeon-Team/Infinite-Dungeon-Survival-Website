@@ -3,130 +3,171 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Chancler Brown — Enemy AI | Infinite Dungeon Survival</title>
+    <title>Chancler Brown — Team Profile | Infinite Dungeon Survival</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
-  <body>
-    <div class="topbar">
+  <body id="top">
+    <!-- Shared nav -->
+    <div class="topbar" role="navigation" aria-label="Primary">
       <div class="nav">
         <div class="logo"><span>IDS</span> Infinite Dungeon Survival</div>
-        <button class="nav-toggle" aria-controls="primary-menu"
-          aria-expanded="false"
-          aria-label="Toggle menu"><span></span><span></span><span></span></button>
+
+        <button class="nav-toggle"
+                aria-controls="primary-menu"
+                aria-expanded="false"
+                aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
         <nav id="primary-menu" class="menu">
           <a href="../index.html">Home</a>
           <a href="elliotte.html">Elliotte</a>
           <a href="hunter.html">Hunter</a>
           <a href="chancler.html" aria-current="page">Chancler</a>
-          <a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD PDF</a>
+          <a href="../Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">GDD PDF</a>
         </nav>
       </div>
     </div>
 
-    <header class="wrap hero">
-      <img src="../images/ksu-ccse-hero.png" alt>
+    <!-- Hero -->
+    <header class="wrap hero" role="banner">
+      <!-- update filename to whatever you actually saved -->
+      <img src="../images/chancler.jpg"
+           alt="Portrait of Chancler Brown">
       <div>
-        <span class="tag">Team Portfolio</span>
+        <span class="tag">Team Member</span>
         <h1>Chancler Brown</h1>
-        <p class="small">Enemy AI Programmer • Combat Engagement Systems</p>
+        <p class="small">
+          Game Designer & Enemy AI • Infinite Dungeon Survival
+        </p>
       </div>
     </header>
 
-    <main class="wrap">
-
+    <main class="wrap" role="main">
+      <!-- About -->
       <section id="about" class="card">
-        <h2>About</h2>
-        <p><strong>Role:</strong> AI and Enemy Behavior Programmer</p>
-        <p><strong>Focus areas:</strong> Enemy movement, engagement, and attack
-          logic.</p>
-        <p class="small">I designed and coded the enemy AI system, including
-          navigation, pursuit, and engagement mechanics. These systems make the
-          combat dynamic and reactive to player actions.</p>
+        <h2>About Chancler</h2>
+        <p>
+          I am a game designer and developer with a focus on enemy AI,
+          encounters, and moment-to-moment gameplay feel. On
+          <strong>Infinite Dungeon Survival</strong>, I helped shape how
+          enemies move, chase, and pressure the player.
+        </p>
       </section>
 
-      <section id="contributions">
+      <!-- This section maps almost 1:1 to the “Highly Recommended Project Website” text -->
+      <section id="highlights">
         <div class="grid2">
           <div class="card">
-            <h2>Responsibilities</h2>
+            <h2>Role in the Project</h2>
             <ul>
-              <li>Programmed enemy pathfinding and attack triggers.</li>
-              <li>Synced AI state changes with wave management.</li>
-              <li>Collaborated on debugging and balancing encounters.</li>
+              <li><strong>Project Role:</strong> Enemy AI & Combat Design</li>
+              <li><strong>Responsibilities:</strong> enemy movement, attack logic,
+                  and balancing encounters.</li>
             </ul>
           </div>
+
           <div class="card">
-            <h2>Key Contributions</h2>
+            <h2>Academic Info</h2>
             <ul>
-              <li>Developed core enemy AI behavior tree in C#.</li>
-              <li>Enabled fluid chase and attack cycles.</li>
-              <li>Enhanced game replayability through varied combat
-                patterns.</li>
+              <li><strong>Program:</strong> M.S. in Software Engineering</li>
+              <!-- update this line with his real date/term -->
+              <li><strong>Projected Graduation Date:</strong> May 2026</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="tech" class="card">
-        <h2>Tech Stack</h2>
-        <p>Unity • C# • NavMesh • GitHub • Visual Studio</p>
+      <section id="goals">
+        <div class="grid2">
+          <div class="card">
+            <h2>Career Interest</h2>
+            <ul>
+              <li><strong>Desire to Intern:</strong> Looking for internship
+                  opportunities in game design or gameplay programming.</li>
+              <li><strong>Dream Job:</strong> Game designer / combat designer on
+                  action or roguelike games.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Other Projects</h2>
+            <ul>
+              <li><strong>Project 1:</strong> [Add another class or personal
+                  game project here.]</li>
+              <li><strong>Project 2:</strong> [Optional second project.]</li>
+              <li><strong>Project 3:</strong> [Optional third project.]</li>
+            </ul>
+            <p class="small">
+              These projects helped me practice rapid prototyping, iteration,
+              and polishing small gameplay loops.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="media">
         <h2>Media</h2>
+
         <figure class="card">
           <video controls preload="metadata" poster="../images/arena3.jpg">
             <source src="../videos/chancler-demo.mp4" type="video/mp4">
           </video>
           <figcaption>Enemy AI pursuit and combat engagement demo.</figcaption>
         </figure>
+
         <div class="grid3">
-          <figure class="card"><img class="thumb" src="../images/arena3.jpg"
-              alt><figcaption>AI chase sequence</figcaption></figure>
-          <figure class="card"><img class="thumb" src="../images/arena2.jpg"
-              alt><figcaption>Attack engagement</figcaption></figure>
-          <figure class="card"><img class="thumb" src="../images/arena1.jpg"
-              alt><figcaption>AI pathfinding test</figcaption></figure>
+          <figure class="card">
+            <img class="thumb" src="../images/arena3.jpg" alt="Enemy AI chase sequence">
+            <figcaption>AI chase sequence</figcaption>
+          </figure>
+          <figure class="card">
+            <img class="thumb" src="../images/arena2.jpg" alt="Attack engagement">
+            <figcaption>Attack engagement</figcaption>
+          </figure>
+          <figure class="card">
+            <img class="thumb" src="../images/arena1.jpg" alt="Pathfinding test arena">
+            <figcaption>AI pathfinding test</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section id="reflection" class="card">
-        <h2>What I Learned</h2>
+      <section id="contact" class="card">
+        <h2>Contact & Links</h2>
         <ul>
-          <li>Learned to design state-based enemy AI in Unity.</li>
-          <li>Improved debugging and iteration for real-time systems.</li>
-          <li>Gained stronger teamwork skills through joint programming
-            sessions.</li>
+          <li><strong>Email:</strong> <a href="mailto:cbrown581@students.kennesaw.edu">cbrown581@students.kennesaw.edu</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chancelor-brown-04a083241/" target="_blank" rel="noopener">
+              linkedin.com/in/chancelor-brown-04a083241/</a></li>
+          <li><a href="../index.html">Project Home Page</a></li>
+          <li><a href="../Infinite_Dungeon_Survival.pdf" target="_blank" rel="noopener">Game Design Document (PDF)</a></li>
+          <li><a href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival"
+                 target="_blank" rel="noopener">Project Repository</a></li>
         </ul>
       </section>
-
-      <section id="links" class="card">
-        <h2>Links</h2>
-        <ul>
-          <li><a href="../index.html">Project Home</a></li>
-          <li><a href="../Infinite_Dungeon_Survival.pdf" target="_blank">GDD
-              (PDF)</a></li>
-          <li><a
-              href="https://github.com/InfiniteDungeon-Team/Infinite-Dungeon-Survival"
-              target="_blank">Repository</a></li>
-          <li><a href="https://www.linkedin.com/in/chancelor-brown-04a083241/"
-              target="_blank">LinkedIn</a></li>
-        </ul>
-      </section>
-
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="wrap footer-meta">
-        <span>© Team Infinite Dungeon Survival</span><span
-          class="spacer"></span>
-        <a href="#top" class="back-to-top">↑ Back to top</a>
+        <span>© Team Infinite Dungeon Survival</span>
+        <span class="spacer"></span>
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
       </div>
     </footer>
+
+    <!-- Lightbox for image zoom -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <figure class="lightbox-inner">
+        <button class="lightbox-close" aria-label="Close image">×</button>
+        <img src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
     <script src="../assets/js/main.js" defer></script>
   </body>
 </html>
